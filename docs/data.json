@@ -1,0 +1,142 @@
+{
+  "services": {
+    "mariees": {
+      "fr": [
+        [
+          "500€",
+          "tulipe",
+          "Forfait Tulipe",
+          "Coiffure et maquillage",
+          "Un forfait essentiel et raffiné, pour une mariée naturelle, lumineuse, pleinement elle-même. L’essai permet de créer ensemble votre mise en beauté idéale. Le jour J, je la réalise avec précision, douceur… et beaucoup d’amour.",
+          "Kit retouche offert, adapté à votre mise en beauté."
+        ],
+        [
+          "280€",
+          "camelia",
+          "Forfait Camélia",
+          "Coiffure ou maquillage",
+          "Pour les mariées qui souhaitent une mise en beauté plus ciblée, mais toujours professionnelle et soignée. L'essai assure une harmonie parfaite avec votre style, vos envies et l’ambiance de votre mariage.",
+          "Kit retouche offert, adapté à votre mise en beauté."
+        ],
+        [
+          "750€",
+          "jasmin",
+          "Forfait Jasmin",
+          "Coiffure et maquillage et événement supplémentaire",
+          "Dîner de bienvenue, brunch du lendemain ou séance d’engagement : je vous accompagne aussi pour ces moments précieux. Une mise en beauté pensée pour durer et s’adapter à plusieurs instants de votre célébration.",
+          "Kit retouche offert, pour chaque moment-clé."
+        ],
+        [
+          "700€",
+          "pivoine",
+          "Forfait Pivoine",
+          "Coiffure et maquillage et retouches jusqu’à la fin de la cérémonie",
+          "Je reste à vos côtés pour assurer des retouches en toute discrétion, jusqu’à votre entrée dans l’allée. Un forfait sérénité pour les perfectionnistes ou les journées bien remplies.",
+          "Kit retouche offert, et retouches professionnelles incluses sur place"
+        ],
+        [
+          "Tarif sur devis uniquement",
+          "rose",
+          "Forfait Rose Éternelle",
+          "Coiffure et maquillage et accompagnement toute la journée et soirée",
+          "Je vous accompagne jusqu’au bout de la nuit, pour veiller à chaque détail de votre mise en beauté : retouches régulières, changement de coiffure ou de lèvres, ou simple présence rassurante pendant votre grand jour. Idéal pour les mariages avec plusieurs tenues, des conditions météo intenses ou une mise en scène photographique exigeante.",
+          "Kit retouche offert et présence experte jusqu’à votre première danse (ou plus si besoin)."
+        ]
+      ],
+      "en": [
+        [
+          "500€",
+          "tulipe",
+          "Tulip Package",
+          "Hair and makeup",
+          "An essential and refined package for a bride who wants to feel natural, radiant, and fully herself. The trial allows us to create your ideal beauty look togandher. On the big day, I recreate it with precision, gentleness… and lots of love.",
+          "Complimentary touch-up kit tailored to your look."
+        ],
+        [
+          "280€",
+          "camelia",
+          "Camellia Package",
+          "Hair or makeup",
+          "Perfect for brides who want a more focused beauty service, while keeping it professional and polished. The trial ensures perfect harmony with your style, your vision, and the spirit of your wedding.",
+          "Complimentary touch-up kit tailored to your look."
+        ],
+        [
+          "750€",
+          "jasmin",
+          "Jasmine Package",
+          "Hair and makeup and one additional event",
+          "Welcome dinner, post-wedding brunch, or engagement session: I’m by your side for these precious moments too. A long-lasting beauty look designed to fit multiple highlights of your celebration.",
+          "Complimentary touch-up kit for each key moment."
+        ],
+        [
+          "700€",
+          "pivoine",
+          "Peony Package",
+          "Hair and makeup and touch-ups until the end of the ceremony",
+          "I stay with you to discreandly handle touch-ups until your walk down the aisle. A peace-of-mind package for perfectionists or tightly scheduled days.",
+          "Complimentary touch-up kit and on-site professional touch-ups included."
+        ],
+        [
+          "Pricing available upon request",
+          "rose",
+          "Eternal Rose Package",
+          "Hair and makeup and full-day & evening support",
+          "I accompany you until the end of the night, caring for every dandail of your look: regular touch-ups, hairstyle or lip changes, or simply a calm and reassuring presence throughout your big day. Ideal for weddings with multiple outfits, intense weather, or demanding photography sandups.",
+          "Complimentary touch-up kit and expert presence until your first dance (or longer if needed)."
+        ]
+      ]
+    },
+    "invitees": {
+      "fr": [
+        [
+          "150€",
+          "anemone",
+          "Forfait Anémone",
+          "Coiffure et maquillage (Retouche RàL)",
+          "Pour les proches qui souhaitent une mise en beauté élégante, coordonnée et naturelle. Idéal pour les témoins, mamans, sœurs ou meilleures amies.",
+          ""
+        ],
+        [
+          "80€",
+          "gypsophile",
+          "Forfait Gypsophile",
+          "Coiffure ou maquillage (Retouche RàL)",
+          "Un look doux et maîtrisé pour vos invitées : parfait pour une harmonie de groupe sans surcharge.",
+          ""
+        ]
+      ],
+      "en": [
+        [
+          "150€",
+          "anemone",
+          "Anemone Package",
+          "Hair and makeup (Lipstick touch-up)",
+          "For loved ones who want an elegant, coordinated, and natural beauty look. Perfect for bridesmaids, mothers, sisters, or best friends.",
+          ""
+        ],
+        [
+          "80€",
+          "gypsophile",
+          "Baby's Breath Package",
+          "Hair or makeup (Lipstick touch-up)",
+          "A soft and polished look for your guests: perfect for cohesive group harmony without overdoing it.",
+          ""
+        ]
+      ]
+    },
+    "autre": {
+      "fr": [
+        ["Pose de faux cils", "10€"],
+        ["Faux cils (bouquets)", "Offert"],
+        ["Maquillage du marié", "30€"],
+        ["Suivi de la mariée", "50€/heure"]
+      ],
+      "en": [
+        ["False lash application", "10€"],
+        ["False lashes (clusters)", "Included"],
+        ["Groom makeup", "30€"],
+        ["Bridal follow-up", "50€/heure"]
+      ]
+    }
+  }
+}

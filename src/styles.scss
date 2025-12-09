@@ -1,1 +1,519 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: newyork;
+  src: url(../public/font.ttf) format("trueType");
+}
+
+@font-face {
+  font-family: quahon;
+  src: url(../public/quahon.otf) format("opentype");
+}
+
+body,
+html {
+  background-color: black;
+}
+
+.logotop {
+  width: 28%;
+  margin: auto;
+  display: flex;
+}
+
+* {
+  position: relative;
+  margin: unset;
+  font-family: "newyork" !important;
+  font-size: 13px;
+}
+.title {
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: underline;
+}
+.smalltitle {
+  font-size: 15px;
+  margin-top: 15px;
+}
+.fond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.content2 {
+  .flex {
+    justify-content: center;
+  }
+  .textimg {
+    width: 15px;
+    height: 15px;
+    top: 3px;
+    padding: 0px 5px;
+  }
+  img {
+    filter: drop-shadow(0px 0px 1px #6f4181);
+  }
+  .logotop {
+    width: 10%;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+  }
+  .logotop2 {
+    width: 10%;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+  }
+  .petitbloc {
+    p {
+      margin-left: 20px;
+    }
+  }
+  .prestas {
+    height: calc(100% - 40px);
+  }
+  .title {
+    text-align: center;
+    padding: 10px 0px;
+    color: #6f4181;
+  }
+  .toptext {
+    text-align: center;
+  }
+  .smalltitle {
+    margin: unset !important;
+    text-decoration: underline;
+    margin-bottom: 4px !important;
+    color: #a23bca;
+  }
+  .wrap {
+    p {
+      margin: unset !important;
+    }
+  }
+  .bottomtext {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+  }
+}
+.content {
+  width: 595px !important;
+  min-width: 595px !important;
+  max-width: 595px !important;
+  height: 842px !important;
+  min-height: 842px !important;
+  max-height: 842px !important;
+}
+
+.content3 .droite .bigmargtop {
+  margin-top: 25px;
+}
+.content3 {
+  width: 842px !important;
+  min-width: 842px !important;
+  max-width: 842px !important;
+  height: 595px !important;
+  min-height: 595px !important;
+  max-height: 595px !important;
+  background-color: white;
+  position: relative;
+  * {
+    font-family: "quahon" !important;
+    line-height: 14px;
+  }
+  .title {
+    margin: 3px 0px;
+    font-size: 12px;
+    padding-left: 10px;
+    //color:#6f4181;
+  }
+  .bigmargbot {
+    margin-bottom: 9px;
+  }
+  .bigmargtop {
+    margin-top: 9px;
+  }
+  .tiny {
+    font-size: 8px;
+    padding-left: 20px;
+    line-height: 8px;
+  }
+  .logotop {
+    width: 15%;
+    margin-bottom: 10px;
+  }
+  .contenu {
+    div {
+      width: 24%;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      p {
+        width: 99%;
+      }
+      p:nth-child(1) {
+        white-space: nowrap;
+        font-size: 10px;
+      }
+      p:nth-child(2),
+      p:nth-child(3),
+      p:nth-child(4) {
+        font-size: 8px;
+        line-height: 8px;
+      }
+    }
+  }
+  .droite {
+    .contenu {
+      div {
+        width: 30%;
+        p {
+          width: 80%;
+        }
+        p:nth-child(1),
+        p:nth-child(2),
+        p:nth-child(3) {
+          margin-bottom: 7px;
+        }
+      }
+    }
+    .tiny {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+  .flex {
+    display: flex;
+    .cote {
+      width: 50%;
+    }
+  }
+  .center {
+    justify-content: center;
+  }
+  .center {
+    text-align: center;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .f5 {
+    font-size: 14px;
+  }
+  .f4 {
+    font-size: 10px;
+  }
+}
+.content3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+.content4 {
+  width: 842px !important;
+  min-width: 842px !important;
+  max-width: 842px !important;
+  height: 595px !important;
+  min-height: 595px !important;
+  max-height: 595px !important;
+  background-color: white;
+  position: relative;
+  * {
+    font-family: "quahon" !important;
+    line-height: 14px;
+  }
+  .fullcontainer {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 20px;
+    .midcontainer {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  }
+  .droite {
+    .fullcontainer {
+      .midcontainer {
+        margin-bottom: 35px;
+      }
+      .center {
+        justify-content: left;
+      }
+      .contenu {
+        div {
+          width: 60%;
+        }
+        img {
+          width: 35%;
+          position: relative;
+          top: -15px;
+          left: 3px;
+          height: 22px;
+        }
+      }
+    }
+  }
+  .title {
+    margin: 3px 0px;
+    font-size: 12px;
+    padding-left: 10px;
+    //color:#6f4181;
+  }
+  .bigmargbot {
+    margin-bottom: 9px;
+  }
+  .bigmargtop {
+    margin-top: 9px;
+  }
+  .tiny {
+    font-size: 8px;
+    padding-left: 20px;
+    line-height: 8px;
+  }
+  .logotop {
+    width: 15%;
+    margin-bottom: 10px;
+  }
+  .contenu {
+    div {
+      width: 30%;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      p {
+        width: 100%;
+        font-size: 8px;
+        line-height: 8px;
+      }
+    }
+    img {
+      width: 25%;
+      position: relative;
+      top: -20px;
+      left: 8px;
+    }
+  }
+  .flex {
+    display: flex;
+    .cote {
+      width: 50%;
+    }
+  }
+  .center {
+    justify-content: center;
+  }
+  .center {
+    text-align: center;
+  }
+  .w100 {
+    width: 100%;
+  }
+  .f5 {
+    font-size: 14px;
+  }
+  .f4 {
+    font-size: 10px;
+  }
+}
+.content4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-50%);
+}
+
+.wrap {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  p {
+    width: 25%;
+    text-align: center;
+  }
+}
+.prestas {
+  width: calc(100% - 40px - 80px);
+  height: calc(100% - 40px - 50px);
+  background-color: #fffb;
+  left: 20px;
+  top: 20px;
+  padding: 0px 40px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000050;
+  }
+}
+.separ {
+  width: 96%;
+  left: 2%;
+  margin: 16px 0px;
+}
+.textes {
+  div {
+    margin-bottom: 10px;
+  }
+}
+.margbot {
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: absolute;
+  width: calc(100% - 20px);
+  padding: 5px 10px;
+  bottom: 0px;
+  background-color: #fffb;
+  p {
+    white-space: nowrap;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 30%;
+      p {
+        width: -moz-available;
+        left: 5px;
+      }
+      .nope {
+        width: fit-content !important;
+        left: 0px !important;
+      }
+    }
+  }
+  .flex:nth-child(1) {
+    margin-bottom: 5px;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    filter: drop-shadow(0px 0px 1px black);
+  }
+}
+.padbot {
+  margin: 3px 0px 11px 0px;
+}
+.ita2 {
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.6;
+  position: relative;
+  top: 7px;
+}
+.ita {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.6;
+}
+.blocs {
+  display: flex;
+  flex-flow: wrap;
+  .forfait {
+    border: 1px solid #00000050;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 8px;
+    display: flex;
+    width: 44%;
+    margin: auto;
+    margin-bottom: 5px;
+    div {
+      width: 100%;
+    }
+    .small {
+      font-size: 10px;
+    }
+    p {
+      font-size: 12px;
+      text-align: center;
+    }
+    .top {
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+      font-size: 15px;
+    }
+    img {
+      position: absolute;
+      top: 0px;
+      height: 100%;
+      opacity: 0.2;
+      margin: auto;
+    }
+    .more {
+      opacity: 0.7;
+    }
+  }
+  .big {
+    width: 90%;
+  }
+}
+.optionsbloc {
+  display: flex;
+  flex-flow: wrap;
+  div {
+    p {
+      text-align: center;
+    }
+    margin: auto;
+    width: 25%;
+  }
+}
+.cours {
+  .all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+  }
+  .toptxt {
+    width: 80%;
+    margin: auto;
+  }
+  .smalltitle {
+    font-weight: bold;
+    //margin-bottom:10px!important;
+  }
+  .last {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  .check {
+    padding-left: 15px;
+  }
+  .dos {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .firstcheck {
+    margin-top: 10px;
+  }
+}
+.titre {
+  color: white;
+  font-weight: bold;
+  margin: 2vh;
+}

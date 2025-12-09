@@ -1,336 +1,2022 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div style="display: flex">
+  <div #htmlContent id="htmlContent" class="content" *ngIf="true">
+    <img src="fond3.jpg" class="fond" />
 
-<style>
-  :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
+    <div *ngIf="lang === 'fr'" class="prestas">
+      <img src="logotop.png" class="logotop" />
 
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
+      <ng-container *ngIf="false; else newBlocFr">
+        <p class="title">Mariages et Fiançailles</p>
 
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
+        <p class="smalltitle" *ngIf="false">Mariée (Essai et Jour-J)</p>
+        <ul *ngIf="false">
+          <li>
+            <div>
+              <p>Maquillage & coiffure :</p>
+              <p>450€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Maquillage :</p>
+              <p>240€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Coiffure :</p>
+              <p>240€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>
+                Maquillage & coiffure supplémentaire (Mariage civil, seconde
+                mise en beauté) :
+              </p>
+              <p>320€</p>
+            </div>
+          </li>
+        </ul>
 
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
+        <p class="smalltitle" *ngIf="true">Mariée (Essai et Jour-J)</p>
+        <ul *ngIf="true">
+          <li>
+            <div>
+              <p>Maquillage & coiffure :</p>
+              <p>400€/personne</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Maquillage :</p>
+              <p>200€/personne</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Coiffure :</p>
+              <p>200€/personne</p>
+            </div>
+          </li>
+        </ul>
 
-    --pill-accent: var(--bright-blue);
+        <p class="smalltitle">Invitée (Jour-J)</p>
+        <ul>
+          <li>
+            <div>
+              <p>Coiffure & maquillage :</p>
+              <p>130€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Coiffure (attache complète) :</p>
+              <p>80€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Coiffure (attache partielle) :</p>
+              <p>70€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Brushing :</p>
+              <p>À partir de 40€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Maquillage :</p>
+              <p>70€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Coiffure enfant (-13 ans) :</p>
+              <p>30€</p>
+            </div>
+          </li>
+        </ul>
 
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+        <p class="smalltitle">Options</p>
+        <ul>
+          <li>
+            <div>
+              <p>Pose de faux cils :</p>
+              <p>10€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Pose de faux cils (bouquets) :</p>
+              <p>Offert</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Maquillage du marié :</p>
+              <p>30€</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Suivi de la mariée :</p>
+              <p>50€/heure</p>
+            </div>
+          </li>
+        </ul>
+      </ng-container>
 
-  h1 {
-    font-size: 3.125rem;
-    color: var(--gray-900);
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-  }
-
-  p {
-    margin: 0;
-    color: var(--gray-700);
-  }
-
-  main {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: inherit;
-    position: relative;
-  }
-
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
-
-  @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-      width: max-content;
-    }
-
-    .divider {
-      height: 1px;
-      width: 100%;
-      background: var(--red-to-pink-to-purple-horizontal-gradient);
-      margin-block: 1.5rem;
-    }
-  }
-</style>
-
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 982 239"
-        fill="none"
-        class="angular-logo"
-      >
-        <g clip-path="url(#a)">
-          <path
-            fill="url(#b)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-          <path
-            fill="url(#c)"
-            d="M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"
-          />
-        </g>
-        <defs>
-          <radialGradient
-            id="c"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientTransform="rotate(118.122 171.182 60.81) scale(205.794)"
-            gradientUnits="userSpaceOnUse"
+      <ng-template #newBlocFr>
+        <div class="flex between">
+          <p class="title padbot">Forfaits Mariées — Essai & Jour J</p>
+          <p class="ita2">Kit de retouches inclus</p>
+        </div>
+        <div class="blocs">
+          <div
+            class="forfait"
+            *ngFor="let service of services.mariees.fr; let i = index"
+            [class.big]="i == 4"
           >
-            <stop stop-color="#FF41F8" />
-            <stop offset=".707" stop-color="#FF41F8" stop-opacity=".5" />
-            <stop offset="1" stop-color="#FF41F8" stop-opacity="0" />
-          </radialGradient>
-          <linearGradient
-            id="b"
-            x1="0"
-            x2="982"
-            y1="192"
-            y2="192"
-            gradientUnits="userSpaceOnUse"
+            <img src="{{ service[1] }}.png" />
+            <div>
+              <p class="top">{{ service[2] }} - {{ service[0] }}</p>
+              <p>{{ service[3] }}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="title padbot">Forfaits Invitées — Jour J</p>
+        <div class="blocs">
+          <div
+            class="forfait"
+            *ngFor="let service of services.invitees.fr; let i = index"
           >
-            <stop stop-color="#F0060B" />
-            <stop offset="0" stop-color="#F0070C" />
-            <stop offset=".526" stop-color="#CC26D5" />
-            <stop offset="1" stop-color="#7702FF" />
-          </linearGradient>
-          <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
-        </defs>
-      </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        @for (item of [
-          { title: 'Explore the Docs', link: 'https://angular.dev' },
-          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },
-          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-        ]; track item.title) {
-          <a
-            class="pill"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
-          >
-            <span>{{ item.title }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="14"
-              viewBox="0 -960 960 960"
-              width="14"
-              fill="currentColor"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-              />
-            </svg>
-          </a>
-        }
+            <img src="{{ service[1] }}.png" [class.more]="i == 1" />
+            <div>
+              <p class="top">{{ service[2] }} - {{ service[0] }}</p>
+              <p>{{ service[3] }}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="ita pad">
+          Les samedis de mai a septembre, mes déplacements sont réservés aux
+          forfaits complets mariée, accompagnés d’au moins 4 prestations pour
+          les invitées.
+        </p>
+
+        <p class="title padbot">Options</p>
+        <div class="blocs optionsbloc">
+          <div *ngFor="let service of services.autre.fr">
+            <p>{{ service[0] }}</p>
+            <p>{{ service[1] }}</p>
+          </div>
+        </div>
+      </ng-template>
+
+      <img src="separ.png" class="separ" />
+
+      <div class="textes">
+        <div>
+          <p>
+            Les indemnités kilométriques sont facturées à 0,40€/km (offertes
+            dans un rayon de 20 km).
+          </p>
+          <p>Les frais de péage restent à la charge du client.</p>
+        </div>
+        <div>
+          <p>
+            Pour réserver votre date, la signature du devis et un acompte de 30
+            % sont requis.
+          </p>
+          <p>
+            Le solde devra être réglé au plus tard le jour J, par virement,
+            chèque ou espèces.
+          </p>
+        </div>
+        <div>
+          <p>
+            À partir de 4 coiffures ou maquillages d'invitées réalisés par mes
+            soins, une remise de 10 % sera appliquée sur la prestation de la
+            mariée.
+          </p>
+        </div>
+        <div>
+          <p>
+            Une préparation très tôt dans la matinée ou un grand nombre
+            d'invitées peut nécessiter une maquilleuse/coiffeuse supplémentaire,
+            rigoureusement sélectionnée pour garantir un service de qualité
+            équivalente.
+          </p>
+          <p>Un supplément de 40€ par maquilleuse/coiffeuse sera appliqué.</p>
+        </div>
       </div>
-      <div class="social-links">
-        <a
-          href="https://github.com/angular/angular"
-          aria-label="Github"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="25"
-            height="24"
-            viewBox="0 0 25 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Github"
+    </div>
+
+    <div *ngIf="lang === 'en'" class="prestas">
+      <img src="logotop.png" class="logotop" />
+
+      <ng-container *ngIf="false; else newBlocEn">
+        <p class="title">Weddings and Engagements</p>
+
+        <p class="smalltitle">Bride (Trial & Wedding Day)</p>
+        <ul>
+          <li>
+            <div>
+              <p>Makeup & Hairstyle:</p>
+              <p>€450</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Makeup:</p>
+              <p>€240</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Hairstyle:</p>
+              <p>€240</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>
+                Additional Makeup & Hairstyle (Civil Wedding, Second Beauty
+                Touch-Up):
+              </p>
+              <p>€320</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="smalltitle">Guest (Wedding Day)</p>
+        <ul>
+          <li>
+            <div>
+              <p>Hairstyle & Makeup:</p>
+              <p>€130</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Hairstyle (Full Updo):</p>
+              <p>€80</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Hairstyle (Partial Updo):</p>
+              <p>€70</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Blow-Dry:</p>
+              <p>Starting from €40</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Makeup:</p>
+              <p>€70</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Children’s Hairstyle (-13 years):</p>
+              <p>€30</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="smalltitle">Options</p>
+        <ul>
+          <li>
+            <div>
+              <p>False Lashes Application:</p>
+              <p>€10</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>False Lashes (Clusters):</p>
+              <p>Free</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Groom’s Makeup:</p>
+              <p>€30</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>Bride’s Follow-Up:</p>
+              <p>€50/hour</p>
+            </div>
+          </li>
+        </ul>
+      </ng-container>
+
+      <ng-template #newBlocEn>
+        <div class="flex between">
+          <p class="title padbot">Bridal Packages — Trial & Wedding Day</p>
+          <p class="ita2">Touch-up kit included</p>
+        </div>
+        <div class="blocs">
+          <div
+            class="forfait"
+            *ngFor="let service of services.mariees.en; let i = index"
+            [class.big]="i == 4"
           >
-            <path
-              d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://twitter.com/angular"
-          aria-label="Twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Twitter"
+            <img src="{{ service[1] }}.png" />
+            <div>
+              <p class="top">{{ service[2] }} - {{ service[0] }}</p>
+              <p>{{ service[3] }}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="title padbot">Guest Packages — Wedding Day</p>
+        <div class="blocs">
+          <div
+            class="forfait"
+            *ngFor="let service of services.invitees.en; let i = index"
           >
-            <path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw"
-          aria-label="Youtube"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg
-            width="29"
-            height="20"
-            viewBox="0 0 29 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="Youtube"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
-            />
-          </svg>
-        </a>
+            <img src="{{ service[1] }}.png" [class.more]="i == 1" />
+            <div>
+              <p class="top">{{ service[2] }} - {{ service[0] }}</p>
+              <p>{{ service[3] }}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="ita pad">
+          On Saturdays from May to September, my bookings are limited to full
+          bridal packages, accompanied by at least four services for guests.
+        </p>
+
+        <p class="title padbot">Add-ons</p>
+        <div class="blocs optionsbloc">
+          <div *ngFor="let service of services.autre.en">
+            <p>{{ service[0] }}</p>
+            <p>{{ service[1] }}</p>
+          </div>
+        </div>
+      </ng-template>
+
+      <img src="separ.png" class="separ" />
+
+      <div class="textes">
+        <div>
+          <p>
+            Mileage fees are charged at €0.40/km (free within a 20 km radius).
+          </p>
+          <p>Toll charges are the client’s responsibility.</p>
+        </div>
+        <div>
+          <p>
+            To secure your date, a signed quote and a 30% deposit are required.
+          </p>
+          <p>
+            The remaining balance must be paid no later than the wedding day via
+            bank transfer, check, or cash.
+          </p>
+        </div>
+        <div>
+          <p>
+            For 4 or more guest hairstyles or makeup services, a 10% discount
+            will be applied to the bride’s service.
+          </p>
+        </div>
+        <div>
+          <p>
+            An early morning preparation or a large number of guests may require
+            an additional makeup artist/hairstylist, carefully selected to
+            maintain the same level of service and professionalism.
+          </p>
+          <p>A €40 fee per additional makeup artist/hairstylist will apply.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="flex">
+        <div>
+          <img src="tel.png" />
+          <p>+ 33 6 68 64 44 02</p>
+        </div>
+        <div>
+          <img src="insta.png" />
+          <p>cloe_mua</p>
+        </div>
+        <div>
+          <p class="nope">SIRET :</p>
+          <p><b>883 822 801 00014</b></p>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div>
+          <img src="mail.png" />
+          <p>cloe.chaudron&#64;outlook.com</p>
+        </div>
+        <div>
+          <img src="fb.png" />
+          <p>Cloé Chaudron - Beauty</p>
+        </div>
+        <div>
+          <img src="logo.png" />
+          <p>www.cloechaudronbeauty.com</p>
+        </div>
       </div>
     </div>
   </div>
-</main>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <div #htmlContent id="htmlContent" class="content content2" *ngIf="false">
+    <img src="fond2.jpg" class="fond" />
 
+    <div *ngIf="lang === 'fr'" class="prestas">
+      <img src="logo.png" class="logotop" />
+      <img src="logo.png" class="logotop2" />
 
-<router-outlet />
+      <p class="title flex">
+        <img src="fullstar.png" class="textimg" />Mise en Beauté Parfaite le
+        Jour de Votre Mariage<img src="fullstar.png" class="textimg" />
+      </p>
+
+      <div class="toptext">
+        <p>Chère future mariée,</p>
+        <p>
+          Pour que votre maquillage et votre coiffure tiennent toute la journée
+          et que vous soyez resplendissante, voici quelques conseils essentiels
+          à suivre avant le grand jour.
+        </p>
+      </div>
+
+      <div class="grosbloc">
+        <p class="title">Préparer sa Peau pour un Maquillage Lumineux</p>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Hydratation & Préparation</p>
+          <p>
+            Buvez suffisamment d’eau et hydratez votre peau matin et soir dans
+            les jours précédant le mariage.
+          </p>
+          <p>
+            Le jour J, ne mettez ni crème ni huile sur votre visage pour une
+            meilleure tenue du maquillage.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Soins en Douceur</p>
+          <p>
+            Quelques jours avant, faites un gommage léger et un masque hydratant
+            pour un teint éclatant.
+          </p>
+          <p style="text-decoration: underline; text-align: center">
+            ⚠ Évitez ces soins la veille pour prévenir toute irritation.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Épilation & Soleil</p>
+          <p>
+            Épilez sourcils et visage 3 à 4 jours avant pour éviter les
+            rougeurs.
+          </p>
+          <p>
+            Protégez votre peau du soleil pour éviter les coups de soleil ou les
+            marques de bronzage.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Petite Astuce</p>
+          <p>
+            Buvez avec une paille pour préserver votre rouge à lèvres plus
+            longtemps.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Votre Kit Retouches (fourni par mes soins)</p>
+          <div class="wrap">
+            <p>Papier matifiant</p>
+            <p>Rouge à lèvres</p>
+            <p>Spray fixateur</p>
+            <p>Coton tige</p>
+            <p>Mouchoirs</p>
+            <p>Lingette démaquillante</p>
+            <p>Épingles à cheveux</p>
+            <p>Bonbon à la menthe</p>
+            <p>Goupillon</p>
+            <p>Houppette</p>
+            <p>Paille</p>
+            <p>Carte de visite</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grosbloc">
+        <p class="title">Préparer Ses Cheveux pour une Coiffure Impeccable</p>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Lavage & Préparation</p>
+          <p>
+            Lavez vos cheveux la veille avec un shampoing doux, sans soin trop
+            riche.
+          </p>
+          <p>
+            Exception : si vos cheveux sont fins et regraissent vite, lavez-les
+            le matin-même avec un shampoing léger.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ À Éviter : Expériences de Dernière Minute</p>
+          <p>
+            Pas de nouvelle coupe, couleur ou traitement capillaire juste avant
+            le mariage. Faites vos essais plusieurs semaines à l’avance.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Soins en Amont</p>
+          <p>
+            Si vos cheveux sont secs, adoptez une routine nourrissante quelques
+            semaines avant :
+          </p>
+          <div class="wrap">
+            <p>✔ Bain d’huile</p>
+            <p>✔ Masques hydratants</p>
+            <p>✔ Sérums fortifiants</p>
+          </div>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Tenue Pratique le Jour J</p>
+          <p>
+            Portez un peignoir ou une chemise à boutons pour ne pas abîmer votre
+            maquillage et votre coiffure en vous habillant.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottomtext">
+        <p class="flex">
+          <img src="emptystar.png" class="textimg" />En suivant ces conseils,
+          vous serez rayonnante tout au long de votre journée !<img
+            src="emptystar.png"
+            class="textimg"
+          />
+        </p>
+        <p>
+          Hâte de vous sublimer lors de votre mise en beauté pour ce jour unique
+          !
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="lang === 'en'" class="prestas">
+      <img src="logo.png" class="logotop" />
+      <img src="logo.png" class="logotop2" />
+
+      <p class="title flex">
+        <img src="fullstar.png" class="textimg" />Perfect Beauty for Your
+        Wedding Day<img src="fullstar.png" class="textimg" />
+      </p>
+
+      <div class="toptext">
+        <p>Dear future bride,</p>
+        <p>
+          To ensure your makeup and hairstyle last all day and that you look
+          stunning, here are some essential tips to follow before your big day.
+        </p>
+      </div>
+
+      <div class="grosbloc">
+        <p class="title">Preparing Your Skin for a Radiant Makeup Look</p>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Hydration & Preparation</p>
+          <p>
+            Drink enough water and moisturize your skin morning and night in the
+            days leading up to the wedding.
+          </p>
+          <p>
+            On the big day, avoid applying any cream or oil to your face for
+            better makeup adherence.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Gentle Care</p>
+          <p>
+            A few days before, exfoliate lightly and apply a hydrating mask for
+            a glowing complexion.
+          </p>
+          <p style="text-decoration: underline; text-align: center">
+            ⚠ Avoid these treatments the day before to prevent any irritation.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Hair Removal & Sun Exposure</p>
+          <p>
+            Pluck your eyebrows and remove facial hair 3 to 4 days before to
+            avoid redness.
+          </p>
+          <p>Protect your skin from the sun to prevent sunburn or tan lines.</p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Little Tip</p>
+          <p>
+            Use a straw when drinking to keep your lipstick intact for longer.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Your Touch-Up Kit (provided by me)</p>
+          <div class="wrap">
+            <p>Blotting paper</p>
+            <p>Lipstick</p>
+            <p>Setting spray</p>
+            <p>Cotton swab</p>
+            <p>Tissues</p>
+            <p>Makeup remover wipe</p>
+            <p>Hairpins</p>
+            <p>Mint candy</p>
+            <p>Spoolie brush</p>
+            <p>Powder puff</p>
+            <p>Straw</p>
+            <p>Business card</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grosbloc">
+        <p class="title">Preparing Your Hair for a Flawless Hairstyle</p>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Washing & Preparation</p>
+          <p>
+            Wash your hair the night before with a mild shampoo, avoiding overly
+            rich treatments.
+          </p>
+          <p>
+            Exception: If your hair is fine and gets greasy quickly, wash it in
+            the morning with a light shampoo.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Avoid Last-Minute Experiments</p>
+          <p>
+            Don't try a new haircut, color, or treatment right before the
+            wedding. Plan and test these several weeks in advance.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Hair Care in Advance</p>
+          <p>
+            If your hair is dry, adopt a nourishing routine a few weeks before:
+          </p>
+          <div class="wrap">
+            <p>✔ Oil treatments</p>
+            <p>✔ Hydrating masks</p>
+            <p>✔ Strengthening serums</p>
+          </div>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">✔ Practical Outfit on the Wedding Day</p>
+          <p>
+            Wear a robe or a button-up shirt to avoid ruining your makeup and
+            hairstyle while getting dressed.
+          </p>
+        </div>
+      </div>
+
+      <div class="bottomtext">
+        <p class="flex">
+          <img src="emptystar.png" class="textimg" />By following these tips,
+          you'll shine throughout your special day!<img
+            src="emptystar.png"
+            class="textimg"
+          />
+        </p>
+        <p>Excited to enhance your beauty on this unique day!</p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    #htmlContent
+    id="htmlContent"
+    class="content content2 cours"
+    *ngIf="false"
+  >
+    <img src="produits.jpg" class="fond" />
+
+    <div *ngIf="lang === 'fr'" class="prestas">
+      <img src="logo.png" class="logotop" />
+      <img src="logo.png" class="logotop2" />
+
+      <p class="title flex">
+        <img src="fullstar.png" class="textimg" />COURS D’AUTO-MAQUILLAGE<img
+          src="fullstar.png"
+          class="textimg"
+        />
+      </p>
+
+      <div class="toptext">
+        <p class="toptxt">
+          Apprenez à sublimer votre visage avec des gestes simples, efficaces et
+          adaptés à VOTRE morphologie, VOTRE style et VOTRE quotidien.
+        </p>
+      </div>
+
+      <div class="all">
+        <div class="petitbloc">
+          <p class="smalltitle">💄 COURS INDIVIDUEL – 140€</p>
+          <p class="dos">Durée : 2h</p>
+          <p>
+            Un moment rien que pour vous, pour apprendre les bases ou
+            perfectionner votre routine.
+          </p>
+          <p class="check firstcheck">✔ Diagnostic de votre trousse actuelle</p>
+          <p class="check">
+            ✔ Conseils personnalisés selon votre peau, votre visage, vos
+            habitudes
+          </p>
+          <p class="check">
+            ✔ Apprentissage d’un maquillage jour + version soirée légère
+          </p>
+          <p class="check">
+            ✔ Fiche récapitulative + liste de produits recommandés
+          </p>
+          <p class="last">
+            Objectif : savoir vous maquiller seule, rapidement et efficacement,
+            sans vous sentir perdue.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">👯‍♀️ COURS EN DUO – 240€ (2 pers.)</p>
+          <p class="dos">Durée : 2h30</p>
+          <p>Un moment complice entre amies, sœurs ou mère-fille.</p>
+          <p class="check firstcheck">
+            ✔ Même programme que le cours individuel
+          </p>
+          <p class="check">✔ Astuces adaptées à chacune</p>
+          <p class="check">✔ Fiche personnalisée pour chaque participante</p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">🧑‍🤝‍🧑 GROUPE PRIVÉ (3 à 6 personnes)</p>
+          <p class="dos">À partir de 100€/personne – Durée : 3h</p>
+          <p>
+            Idéal pour un EVJF, un anniversaire ou une après-midi entre copines.
+          </p>
+          <p class="check firstcheck">✔ Démonstration sur une volontaire</p>
+          <p class="check">✔ Reproductions accompagnées étape par étape</p>
+          <p class="check">✔ Conseils personnalisés pour chacune</p>
+          <p class="check">
+            ✔ Ambiance conviviale + petit cadeau beauté pour chaque participante
+          </p>
+          <p class="last">
+            Tarif exact sur devis selon le nombre de personnes, lieu, et
+            attentes spécifiques.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">🏡 À DOMICILE</p>
+          <p class="firstcheck">
+            Je me déplace chez vous ou sur le lieu de votre choix (dans le
+            Vaucluse ou départements voisins).
+          </p>
+          <p>Frais de déplacement en supplément selon la zone.</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="lang === 'en'" class="prestas">
+      <img src="logo.png" class="logotop" />
+      <img src="logo.png" class="logotop2" />
+
+      <p class="title flex">
+        <img src="fullstar.png" class="textimg" />SELF-MAKEUP LESSON<img
+          src="fullstar.png"
+          class="textimg"
+        />
+      </p>
+
+      <div class="toptext">
+        <p class="toptxt">
+          Learn to enhance your face with simple, effective gestures adapted to
+          YOUR features, YOUR style, and YOUR daily life.
+        </p>
+      </div>
+
+      <div class="all">
+        <div class="petitbloc">
+          <p class="smalltitle">💄 INDIVIDUAL LESSON – €140</p>
+          <p class="dos">Duration: 2h</p>
+          <p>
+            A moment just for you to learn the basics or improve your routine.
+          </p>
+          <p class="check firstcheck">✔ Review of your current makeup bag</p>
+          <p class="check">
+            ✔ Personalized advice based on your skin, face, and habits
+          </p>
+          <p class="check">✔ Learning a day makeup + a light evening version</p>
+          <p class="check">✔ Summary sheet + list of recommended products</p>
+          <p class="last">
+            Goal: to know how to do your own makeup quickly and effectively
+            without feeling lost.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">👯‍♀️ DUO LESSON – €240 (2 people)</p>
+          <p class="dos">Duration: 2h30</p>
+          <p>A fun moment between friends, sisters, or mother and daughter.</p>
+          <p class="check firstcheck">
+            ✔ Same program as the individual lesson
+          </p>
+          <p class="check">✔ Tips adapted to each person</p>
+          <p class="check">✔ Personalized sheet for each participant</p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">🧑‍🤝‍🧑 PRIVATE GROUP (3 to 6 people)</p>
+          <p class="dos">From €100/person – Duration: 3h</p>
+          <p>
+            Perfect for a bachelorette party, birthday, or an afternoon with
+            friends.
+          </p>
+          <p class="check firstcheck">✔ Demonstration on a volunteer</p>
+          <p class="check">✔ Guided step-by-step practice</p>
+          <p class="check">✔ Personalized advice for each person</p>
+          <p class="check">
+            ✔ Friendly atmosphere + small beauty gift for each participant
+          </p>
+          <p class="last">
+            Exact price on quotation depending on number of people, location,
+            and specific requests.
+          </p>
+        </div>
+
+        <div class="petitbloc">
+          <p class="smalltitle">🏡 AT HOME</p>
+          <p class="firstcheck">
+            I come to your home or location of your choice (in Vaucluse or
+            neighboring departments).
+          </p>
+          <p>Travel costs extra depending on the area.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div #htmlContent id="htmlContent" class="content content3" *ngIf="false">
+    <div class="flex">
+      <div class="cote gauche" *ngIf="lang === 'fr'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Votre routine beauté avant le jour-j</p>
+        <p class="center w100 f4">
+          “Pour comprendre votre peau et l’aider à être au top le grand jour”
+        </p>
+
+        <p class="title bigmargtop">Type de peau :</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Peau normale</p>
+            <p>Équilibrée, peu d’imperfections, teint uniforme.</p>
+            <p>Objectif : maintenir l’équilibre avec des soins doux.</p>
+          </div>
+          <div>
+            <p>☐ Peau mixte</p>
+            <p>Grasse sur la zone T, sèche ou normale ailleurs.</p>
+            <p>Objectif : équilibrer sans agresser.</p>
+          </div>
+          <div>
+            <p>☐ Peau sèche</p>
+            <p>Tiraillements, inconfort, teint terne.</p>
+            <p>Objectif : nourrir en profondeur et apaiser.</p>
+          </div>
+          <div>
+            <p>☐ Peau grasse</p>
+            <p>Brillance, pores visibles, imperfections fréquentes.</p>
+            <p>Objectif : maîtriser et réguler le sébum sans dessécher.</p>
+          </div>
+        </div>
+
+        <p class="title">État de peau :</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Déshydratée</p>
+            <p>Manque d’eau, tiraillements, ridules visibles.</p>
+            <p>
+              À faire : boire, hydratation matin/soir, soins doux, base
+              hydratante.
+            </p>
+          </div>
+          <div>
+            <p>☐ Sensible</p>
+            <p>Rougeurs, picotements, inconfort.</p>
+            <p>
+              À faire : soins sans parfum, textures apaisantes, maquillage doux.
+            </p>
+          </div>
+          <div>
+            <p>☐ Acnéique</p>
+            <p>Boutons, points noirs, zones inflammées.</p>
+            <p>
+              À faire : nettoyer, hydrater, ne pas toucher, base lissante +
+              correcteur ciblé.
+            </p>
+          </div>
+          <div>
+            <p>☐ Mature</p>
+            <p>Rides, perte de fermeté, relâchement.</p>
+            <p>
+              À faire : rétinol, peptides, vitamine C, massage Gua Sha, SPF.
+            </p>
+          </div>
+          <div>
+            <p>☐ Encombrée</p>
+            <p>
+              Texture irrégulière / pores visibles. Grain irrégulier, pores
+              dilatés.
+            </p>
+            <p>
+              À faire : gommage, masque purifiant, sérum lissant, base
+              floutante.
+            </p>
+          </div>
+          <div>
+            <p>☐ Fatiguée</p>
+            <p>Manque d’éclat, teint gris ou jaunâtre.</p>
+            <p>
+              À faire : gommage doux, vitamine C, base lumineuse, textures
+              crème.
+            </p>
+          </div>
+          <div>
+            <p>☐ Rougeurs / Couperose</p>
+            <p>Rougeurs localisées, vaisseaux visibles.</p>
+            <p>
+              À faire : soins apaisants, protection solaire, base correctrice
+              verte.
+            </p>
+          </div>
+        </div>
+
+        <p class="title">Ton de peau :</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Clair</p>
+          </div>
+          <div>
+            <p>☐ Moyen</p>
+          </div>
+          <div>
+            <p>☐ Foncé</p>
+          </div>
+          <div>
+            <p>☐ Très foncé</p>
+          </div>
+        </div>
+
+        <p class="title">Sous-ton de peau :</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Froid</p>
+            <p>Veines bleues ou violettes.</p>
+            <p>Peau rosée.</p>
+          </div>
+          <div>
+            <p>☐ Neutre</p>
+            <p>Veines bleues/vertes.</p>
+            <p>Peau rosée/dorée.</p>
+          </div>
+          <div>
+            <p>☐ Chaud</p>
+            <p>Veines verdâtres.</p>
+            <p>Peau dorée.</p>
+          </div>
+          <div>
+            <p>☐ Olive</p>
+            <p>Veines bistres.</p>
+            <p>Peau verte/grise.</p>
+          </div>
+        </div>
+
+        <p class="title">Cernes</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Bleus / violets</p>
+            <p>
+              Souvent liés à une circulation sanguine ou une peau très fine.
+            </p>
+          </div>
+          <div>
+            <p>☐ Rouges / rosés</p>
+            <p>Souvent liés à l’inflammation ou à la fatigue.</p>
+          </div>
+          <div>
+            <p>☐ Bruns</p>
+            <p>Hyperpigmentation ou hérédité.</p>
+          </div>
+          <div>
+            <p>☐ Gris / verdâtres</p>
+            <p>
+              Peu fréquents, souvent liés à une peau très claire ou à un mélange
+              de sous-ton.
+            </p>
+          </div>
+        </div>
+
+        <p class="title">Colorimétrie</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Bleu / violet</p>
+            <p>Orange / pêche</p>
+          </div>
+          <div>
+            <p>☐ Rouge / rosé</p>
+            <p>Vert pâle</p>
+          </div>
+          <div>
+            <p>☐ Marron</p>
+            <p>Pêche clair / abricot</p>
+          </div>
+          <div>
+            <p>☐ Gris / vert</p>
+            <p>Lavande / violet clair</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cote droite" *ngIf="lang === 'fr'">
+        <img src="logotop.png" class="logotop" />
+
+        <p class="title bigmargtop">Les contrastes peau – cheveux – yeux</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Faible contraste</p>
+            <p>
+              Peau, yeux et cheveux proches en intensité → blondes claires,
+              rousses, peaux très claires avec yeux clairs
+            </p>
+            <p>Maquillage doux, fondu, couleurs pastel ou nude.</p>
+            <p>
+              ➡️ Exemple : beige rosé, pêche, brun clair, liner marron plutôt
+              que noir.
+            </p>
+          </div>
+          <div>
+            <p>☐ Contraste moyen</p>
+            <p>
+              Peau claire avec cheveux/yeux moyens, ou peau médium avec
+              cheveux/yeux médium
+            </p>
+            <p>
+              Maquillage équilibré : intensité sur les yeux ou la bouche, mais
+              pas les deux trop forts.
+            </p>
+            <p>
+              ➡️ Exemple : kaki, prune douce, bruns moyens, lèvres framboise ou
+              nude soutenu.
+            </p>
+          </div>
+          <div>
+            <p>☐ Fort contraste</p>
+            <p>
+              Peau claire + cheveux foncés + yeux foncés, ou peau foncée avec
+              cheveux/yeux très sombres
+            </p>
+            <p>Supporte très bien les maquillages marqués et intenses.</p>
+            <p>
+              ➡️ Exemple : smoky eyes, eye-liner noir, bouche rouge, contrastes
+              nets.
+            </p>
+          </div>
+        </div>
+
+        <p class="title bigmargtop">Les contrastes en maquillage</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>Clair vs Foncé</p>
+            <p>
+              Les clairs attirent la lumière (anti-cernes, enlumineur, fards
+              champagne).
+            </p>
+            <p>Les foncés sculptent et creusent (contour, bruns, smoky).</p>
+            <p>➡️ Utiles pour équilibrer les volumes et donner du relief.</p>
+          </div>
+          <div>
+            <p>Mat vs Irisé</p>
+            <p>
+              Le mat structure et discipline (fards bruns mats, poudres, rouges
+              à lèvres mats).
+            </p>
+            <p>
+              L’irisé capte la lumière et donne éclat (enlumineur, fards nacrés,
+              gloss).
+            </p>
+            <p>
+              ➡️ En mariée, on mélange les deux : mat pour la tenue + irisé pour
+              l’éclat.
+            </p>
+          </div>
+          <div>
+            <p>Froid vs Chaud</p>
+            <p>
+              Les froids (rosés, prune, gris, bleu, argent) apportent élégance
+              et sobriété.
+            </p>
+            <p>
+              Les chauds (pêche, orangé, doré, bronze) donnent bonne mine et
+              réchauffent.
+            </p>
+            <p>
+              ➡️ Le choix dépend de la carnation et du contraste naturel de la
+              mariée.
+            </p>
+          </div>
+        </div>
+
+        <p class="title bigmargbot">Conseils généraux avant le jour J</p>
+        <p class="tiny">
+          • Boire beaucoup d’eau la semaine précédant le mariage.
+        </p>
+        <p class="tiny">
+          • Éviter les nouveaux produits (pour éviter les réactions).
+        </p>
+        <p class="tiny">• Faire un soin visage doux 5 à 7 jours avant.</p>
+        <p class="tiny">• Dormir suffisamment pour une peau reposée.</p>
+        <p class="tiny">• Ne pas oublier le SPF (même les jours nuageux).</p>
+        <p class="title bigmargtop">Notes :</p>
+      </div>
+
+      <div class="cote gauche" *ngIf="lang === 'en'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Your beauty routine before the big day</p>
+        <p class="center w100 f4">
+          “Understand your skin and help it look its best on the big day”
+        </p>
+
+        <p class="title bigmargtop">Skin type:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Normal skin</p>
+            <p>Balanced, few imperfections, even complexion.</p>
+            <p>Goal: maintain balance with gentle care.</p>
+          </div>
+          <div>
+            <p>☐ Combination skin</p>
+            <p>Oily on the T-zone, dry or normal elsewhere.</p>
+            <p>Goal: balance without irritation.</p>
+          </div>
+          <div>
+            <p>☐ Dry skin</p>
+            <p>Tightness, discomfort, dull complexion.</p>
+            <p>Goal: deeply nourish and soothe.</p>
+          </div>
+          <div>
+            <p>☐ Oily skin</p>
+            <p>Shine, visible pores, frequent imperfections.</p>
+            <p>Goal: control and regulate sebum without drying out.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin condition:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Dehydrated</p>
+            <p>Lack of water, tightness, visible fine lines.</p>
+            <p>
+              To do: drink water, moisturize morning/evening, use gentle
+              products, hydrating base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Sensitive</p>
+            <p>Redness, tingling, discomfort.</p>
+            <p>
+              To do: fragrance-free products, soothing textures, gentle makeup.
+            </p>
+          </div>
+          <div>
+            <p>☐ Acne-prone</p>
+            <p>Pimples, blackheads, inflamed areas.</p>
+            <p>
+              To do: cleanse, moisturize, avoid touching, smoothing base +
+              targeted concealer.
+            </p>
+          </div>
+          <div>
+            <p>☐ Mature</p>
+            <p>Wrinkles, loss of firmness, sagging.</p>
+            <p>To do: retinol, peptides, vitamin C, Gua Sha massage, SPF.</p>
+          </div>
+          <div>
+            <p>☐ Congested</p>
+            <p>Uneven texture / visible pores. Uneven grain, enlarged pores.</p>
+            <p>
+              To do: exfoliate, purifying mask, smoothing serum, blurring base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Tired</p>
+            <p>Lack of radiance, grayish or yellowish complexion.</p>
+            <p>
+              To do: gentle exfoliation, vitamin C, illuminating base, creamy
+              textures.
+            </p>
+          </div>
+          <div>
+            <p>☐ Redness / Rosacea</p>
+            <p>Localized redness, visible blood vessels.</p>
+            <p>To do: soothing care, sun protection, green corrective base.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin tone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Light</p>
+          </div>
+          <div>
+            <p>☐ Medium</p>
+          </div>
+          <div>
+            <p>☐ Dark</p>
+          </div>
+          <div>
+            <p>☐ Very dark</p>
+          </div>
+        </div>
+
+        <p class="title">Skin undertone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Cool</p>
+            <p>Blue or purple veins.</p>
+            <p>Pink skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Neutral</p>
+            <p>Blue/green veins.</p>
+            <p>Pink/golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Warm</p>
+            <p>Greenish veins.</p>
+            <p>Golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Olive</p>
+            <p>Brownish veins.</p>
+            <p>Greenish/grayish skin tone.</p>
+          </div>
+        </div>
+
+        <p class="title bigmargbot">General tips before the big day</p>
+        <p class="tiny">• Drink plenty of water the week before the wedding.</p>
+        <p class="tiny">• Avoid new products (to prevent reactions).</p>
+        <p class="tiny">• Have a gentle facial 5 to 7 days beforehand.</p>
+        <p class="tiny">• Get enough sleep for well-rested skin.</p>
+        <p class="tiny">• Don’t forget SPF (even on cloudy days).</p>
+
+        <p class="title bigmargtop">Notes:</p>
+      </div>
+
+      <div class="cote gauche" *ngIf="lang === 'en'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Your beauty routine before the big day</p>
+        <p class="center w100 f4">
+          “Understand your skin and help it look its best on the big day”
+        </p>
+
+        <p class="title bigmargtop">Skin type:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Normal skin</p>
+            <p>Balanced, few imperfections, even complexion.</p>
+            <p>Goal: maintain balance with gentle care.</p>
+          </div>
+          <div>
+            <p>☐ Combination skin</p>
+            <p>Oily on the T-zone, dry or normal elsewhere.</p>
+            <p>Goal: balance without irritation.</p>
+          </div>
+          <div>
+            <p>☐ Dry skin</p>
+            <p>Tightness, discomfort, dull complexion.</p>
+            <p>Goal: deeply nourish and soothe.</p>
+          </div>
+          <div>
+            <p>☐ Oily skin</p>
+            <p>Shine, visible pores, frequent imperfections.</p>
+            <p>Goal: control and regulate sebum without drying out.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin condition:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Dehydrated</p>
+            <p>Lack of water, tightness, visible fine lines.</p>
+            <p>
+              To do: drink water, moisturize morning/evening, use gentle
+              products, hydrating base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Sensitive</p>
+            <p>Redness, tingling, discomfort.</p>
+            <p>
+              To do: fragrance-free products, soothing textures, gentle makeup.
+            </p>
+          </div>
+          <div>
+            <p>☐ Acne-prone</p>
+            <p>Pimples, blackheads, inflamed areas.</p>
+            <p>
+              To do: cleanse, moisturize, avoid touching, smoothing base +
+              targeted concealer.
+            </p>
+          </div>
+          <div>
+            <p>☐ Mature</p>
+            <p>Wrinkles, loss of firmness, sagging.</p>
+            <p>To do: retinol, peptides, vitamin C, Gua Sha massage, SPF.</p>
+          </div>
+          <div>
+            <p>☐ Congested</p>
+            <p>Uneven texture / visible pores. Uneven grain, enlarged pores.</p>
+            <p>
+              To do: exfoliate, purifying mask, smoothing serum, blurring base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Tired</p>
+            <p>Lack of radiance, grayish or yellowish complexion.</p>
+            <p>
+              To do: gentle exfoliation, vitamin C, illuminating base, creamy
+              textures.
+            </p>
+          </div>
+          <div>
+            <p>☐ Redness / Rosacea</p>
+            <p>Localized redness, visible blood vessels.</p>
+            <p>To do: soothing care, sun protection, green corrective base.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin tone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Light</p>
+          </div>
+          <div>
+            <p>☐ Medium</p>
+          </div>
+          <div>
+            <p>☐ Dark</p>
+          </div>
+          <div>
+            <p>☐ Very dark</p>
+          </div>
+        </div>
+
+        <p class="title">Skin undertone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Cool</p>
+            <p>Blue or purple veins.</p>
+            <p>Pink skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Neutral</p>
+            <p>Blue/green veins.</p>
+            <p>Pink/golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Warm</p>
+            <p>Greenish veins.</p>
+            <p>Golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Olive</p>
+            <p>Brownish veins.</p>
+            <p>Greenish/grayish skin tone.</p>
+          </div>
+        </div>
+
+        <p class="title bigmargbot">General tips before the big day</p>
+        <p class="tiny">• Drink plenty of water the week before the wedding.</p>
+        <p class="tiny">• Avoid new products (to prevent reactions).</p>
+        <p class="tiny">• Have a gentle facial 5 to 7 days beforehand.</p>
+        <p class="tiny">• Get enough sleep for well-rested skin.</p>
+        <p class="tiny">• Don’t forget SPF (even on cloudy days).</p>
+
+        <p class="title bigmargtop">Notes:</p>
+      </div>
+    </div>
+  </div>
+
+  <div #htmlContent id="htmlContent" class="content content4" *ngIf="false">
+    <div class="flex">
+      <div class="cote gauche" *ngIf="lang === 'fr'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Formes de visage</p>
+
+        <div class="fullcontainer">
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Ovale</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Tout lui va</p>
+              </div>
+              <div>
+                <p>
+                  ❌ Éviter d’allonger encore plus (contouring trop marqué vers
+                  le bas)
+                </p>
+              </div>
+              <img src="visages/0.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Rond</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Redonner de la structure : contouring en creux de joues,
+                  blush en diagonale, sourcils arqués
+                </p>
+              </div>
+              <div>
+                <p>
+                  ❌ Trop d’arrondi dans le maquillage (blush rond sur les
+                  pommettes, sourcils ronds)
+                </p>
+              </div>
+              <img src="visages/1.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Carré</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Adoucir : blush arrondi, contouring léger sur les angles,
+                  lèvres pulpeuses
+                </p>
+              </div>
+              <div>
+                <p>❌ Souligner trop la mâchoire ou les angles</p>
+              </div>
+              <img src="visages/2.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Rectangulaire / Allongé</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Raccourcir visuellement : blush horizontal, ombres sur le
+                  haut/bas du visage
+                </p>
+              </div>
+              <div>
+                <p>
+                  ❌ Accentuer la verticalité (contour trop bas, sourcils trop
+                  arqués)
+                </p>
+              </div>
+              <img src="visages/3.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Cœur / Triangle inversé</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Adoucir le front : contour léger des tempes, mettre
+                  l’accent sur le bas (blush arrondi, lèvres)
+                </p>
+              </div>
+              <div>
+                <p>❌ Trop charger le haut du visage</p>
+              </div>
+              <img src="visages/4.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Diamant</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Équilibrer : lumière sur front/menton, adoucir les
+                  pommettes avec blush diffus
+                </p>
+              </div>
+              <div>
+                <p>❌ Trop d’accent sur les pommettes déjà présentes</p>
+              </div>
+              <img src="visages/5.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Ovale allongé</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Élargir le centre (blush horizontal, volume sur côtés)</p>
+              </div>
+              <div>
+                <p>❌ Éviter lignes verticales et volume au sommet</p>
+              </div>
+              <img src="visages/6.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Triangle</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Élargir le haut (lumière tempes/front, blush vers les
+                  tempes)
+                </p>
+              </div>
+              <div>
+                <p>❌ Accentuer la mâchoire, coiffures plaquées en bas</p>
+              </div>
+              <img src="visages/7.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cote droite" *ngIf="lang === 'fr'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Formes d'yeux</p>
+
+        <div class="fullcontainer">
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ En amande</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Tout leur va, accentuer l’étirement naturel</p>
+              </div>
+              <div>
+                <p>❌ Trop arrondir (ça casse la forme élégante)</p>
+              </div>
+              <img src="yeux/0.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Ronds</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Allonger avec eyeliner étiré, fards en halo horizontal</p>
+              </div>
+              <div>
+                <p>
+                  ❌ Accentuer la rondeur (liner trop arrondi, halo circulaire)
+                </p>
+              </div>
+              <img src="yeux/1.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Petits</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Illuminer coin interne, liner fin, recourber cils</p>
+              </div>
+              <div>
+                <p>❌ Charger avec liner épais ou fards trop sombres partout</p>
+              </div>
+              <img src="yeux/2.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Tombants / vers le bas</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Remonter : eyeliner qui se lève en externe, blush et fard
+                  en diagonale ascendante
+                </p>
+              </div>
+              <div>
+                <p>❌ Suivre le regard vers le bas (effet triste accentué)</p>
+              </div>
+              <img src="yeux/3.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Paupière tombante</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Travailler au-dessus du pli, liner fin, cils recourbés</p>
+              </div>
+              <div>
+                <p>
+                  ❌ Mettre tout dans le creux (disparaît une fois l’œil
+                  ouvert), liner épais
+                </p>
+              </div>
+              <img src="yeux/4.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Proéminents</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>
+                  ✅ Structurer avec tons mats, liner fumé, couleurs foncées sur
+                  la paupière mobile
+                </p>
+              </div>
+              <div>
+                <p>❌ Trop d’irisé sur la paupière bombée</p>
+              </div>
+              <img src="yeux/5.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Écartés</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Assombrir coin interne, sourcils rapprochés</p>
+              </div>
+              <div>
+                <p>
+                  ❌ Accentuer encore l’écart avec trop de lumière au centre
+                </p>
+              </div>
+              <img src="yeux/6.png" />
+            </div>
+          </div>
+
+          <div class="midcontainer">
+            <p class="title bigmargtop">☐ Rapprochés</p>
+            <div class="flex wrap center contenu">
+              <div>
+                <p>✅ Illuminer coin interne, allonger en externe</p>
+              </div>
+              <div>
+                <p>❌ Assombrir trop près du nez</p>
+              </div>
+              <img src="yeux/7.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cote gauche" *ngIf="lang === 'en'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Your beauty routine before the big day</p>
+        <p class="center w100 f4">
+          “Understand your skin and help it look its best on the big day”
+        </p>
+
+        <p class="title bigmargtop">Skin type:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Normal skin</p>
+            <p>Balanced, few imperfections, even complexion.</p>
+            <p>Goal: maintain balance with gentle care.</p>
+          </div>
+          <div>
+            <p>☐ Combination skin</p>
+            <p>Oily on the T-zone, dry or normal elsewhere.</p>
+            <p>Goal: balance without irritation.</p>
+          </div>
+          <div>
+            <p>☐ Dry skin</p>
+            <p>Tightness, discomfort, dull complexion.</p>
+            <p>Goal: deeply nourish and soothe.</p>
+          </div>
+          <div>
+            <p>☐ Oily skin</p>
+            <p>Shine, visible pores, frequent imperfections.</p>
+            <p>Goal: control and regulate sebum without drying out.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin condition:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Dehydrated</p>
+            <p>Lack of water, tightness, visible fine lines.</p>
+            <p>
+              To do: drink water, moisturize morning/evening, use gentle
+              products, hydrating base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Sensitive</p>
+            <p>Redness, tingling, discomfort.</p>
+            <p>
+              To do: fragrance-free products, soothing textures, gentle makeup.
+            </p>
+          </div>
+          <div>
+            <p>☐ Acne-prone</p>
+            <p>Pimples, blackheads, inflamed areas.</p>
+            <p>
+              To do: cleanse, moisturize, avoid touching, smoothing base +
+              targeted concealer.
+            </p>
+          </div>
+          <div>
+            <p>☐ Mature</p>
+            <p>Wrinkles, loss of firmness, sagging.</p>
+            <p>To do: retinol, peptides, vitamin C, Gua Sha massage, SPF.</p>
+          </div>
+          <div>
+            <p>☐ Congested</p>
+            <p>Uneven texture / visible pores. Uneven grain, enlarged pores.</p>
+            <p>
+              To do: exfoliate, purifying mask, smoothing serum, blurring base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Tired</p>
+            <p>Lack of radiance, grayish or yellowish complexion.</p>
+            <p>
+              To do: gentle exfoliation, vitamin C, illuminating base, creamy
+              textures.
+            </p>
+          </div>
+          <div>
+            <p>☐ Redness / Rosacea</p>
+            <p>Localized redness, visible blood vessels.</p>
+            <p>To do: soothing care, sun protection, green corrective base.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin tone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Light</p>
+          </div>
+          <div>
+            <p>☐ Medium</p>
+          </div>
+          <div>
+            <p>☐ Dark</p>
+          </div>
+          <div>
+            <p>☐ Very dark</p>
+          </div>
+        </div>
+
+        <p class="title">Skin undertone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Cool</p>
+            <p>Blue or purple veins.</p>
+            <p>Pink skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Neutral</p>
+            <p>Blue/green veins.</p>
+            <p>Pink/golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Warm</p>
+            <p>Greenish veins.</p>
+            <p>Golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Olive</p>
+            <p>Brownish veins.</p>
+            <p>Greenish/grayish skin tone.</p>
+          </div>
+        </div>
+
+        <p class="title bigmargbot">General tips before the big day</p>
+        <p class="tiny">• Drink plenty of water the week before the wedding.</p>
+        <p class="tiny">• Avoid new products (to prevent reactions).</p>
+        <p class="tiny">• Have a gentle facial 5 to 7 days beforehand.</p>
+        <p class="tiny">• Get enough sleep for well-rested skin.</p>
+        <p class="tiny">• Don’t forget SPF (even on cloudy days).</p>
+
+        <p class="title bigmargtop">Notes:</p>
+      </div>
+
+      <div class="cote gauche" *ngIf="lang === 'en'">
+        <img src="logotop.png" class="logotop" />
+        <p class="center w100 f5">Your beauty routine before the big day</p>
+        <p class="center w100 f4">
+          “Understand your skin and help it look its best on the big day”
+        </p>
+
+        <p class="title bigmargtop">Skin type:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Normal skin</p>
+            <p>Balanced, few imperfections, even complexion.</p>
+            <p>Goal: maintain balance with gentle care.</p>
+          </div>
+          <div>
+            <p>☐ Combination skin</p>
+            <p>Oily on the T-zone, dry or normal elsewhere.</p>
+            <p>Goal: balance without irritation.</p>
+          </div>
+          <div>
+            <p>☐ Dry skin</p>
+            <p>Tightness, discomfort, dull complexion.</p>
+            <p>Goal: deeply nourish and soothe.</p>
+          </div>
+          <div>
+            <p>☐ Oily skin</p>
+            <p>Shine, visible pores, frequent imperfections.</p>
+            <p>Goal: control and regulate sebum without drying out.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin condition:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Dehydrated</p>
+            <p>Lack of water, tightness, visible fine lines.</p>
+            <p>
+              To do: drink water, moisturize morning/evening, use gentle
+              products, hydrating base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Sensitive</p>
+            <p>Redness, tingling, discomfort.</p>
+            <p>
+              To do: fragrance-free products, soothing textures, gentle makeup.
+            </p>
+          </div>
+          <div>
+            <p>☐ Acne-prone</p>
+            <p>Pimples, blackheads, inflamed areas.</p>
+            <p>
+              To do: cleanse, moisturize, avoid touching, smoothing base +
+              targeted concealer.
+            </p>
+          </div>
+          <div>
+            <p>☐ Mature</p>
+            <p>Wrinkles, loss of firmness, sagging.</p>
+            <p>To do: retinol, peptides, vitamin C, Gua Sha massage, SPF.</p>
+          </div>
+          <div>
+            <p>☐ Congested</p>
+            <p>Uneven texture / visible pores. Uneven grain, enlarged pores.</p>
+            <p>
+              To do: exfoliate, purifying mask, smoothing serum, blurring base.
+            </p>
+          </div>
+          <div>
+            <p>☐ Tired</p>
+            <p>Lack of radiance, grayish or yellowish complexion.</p>
+            <p>
+              To do: gentle exfoliation, vitamin C, illuminating base, creamy
+              textures.
+            </p>
+          </div>
+          <div>
+            <p>☐ Redness / Rosacea</p>
+            <p>Localized redness, visible blood vessels.</p>
+            <p>To do: soothing care, sun protection, green corrective base.</p>
+          </div>
+        </div>
+
+        <p class="title">Skin tone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Light</p>
+          </div>
+          <div>
+            <p>☐ Medium</p>
+          </div>
+          <div>
+            <p>☐ Dark</p>
+          </div>
+          <div>
+            <p>☐ Very dark</p>
+          </div>
+        </div>
+
+        <p class="title">Skin undertone:</p>
+        <div class="flex wrap center contenu">
+          <div>
+            <p>☐ Cool</p>
+            <p>Blue or purple veins.</p>
+            <p>Pink skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Neutral</p>
+            <p>Blue/green veins.</p>
+            <p>Pink/golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Warm</p>
+            <p>Greenish veins.</p>
+            <p>Golden skin tone.</p>
+          </div>
+          <div>
+            <p>☐ Olive</p>
+            <p>Brownish veins.</p>
+            <p>Greenish/grayish skin tone.</p>
+          </div>
+        </div>
+
+        <p class="title bigmargbot">General tips before the big day</p>
+        <p class="tiny">• Drink plenty of water the week before the wedding.</p>
+        <p class="tiny">• Avoid new products (to prevent reactions).</p>
+        <p class="tiny">• Have a gentle facial 5 to 7 days beforehand.</p>
+        <p class="tiny">• Get enough sleep for well-rested skin.</p>
+        <p class="tiny">• Don’t forget SPF (even on cloudy days).</p>
+
+        <p class="title bigmargtop">Notes:</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="options">
+    <div>
+      <button (click)="lang = lang == 'fr' ? 'en' : 'fr'">
+        {{ lang == "fr" ? "Français" : "Anglais" }}
+      </button>
+      <button (click)="generatePDFfromHTML()">Générer PDF</button>
+      <button (click)="generateJPGfromHTML()">Générer JPG</button>
+      <button (click)="generatePDFfromHTMLPaysage()">
+        Générer PDF Paysage
+      </button>
+    </div>
+
+    <div>
+      <p class="titre">Forfaits mariées</p>
+      <div
+        class="forfait"
+        *ngFor="let service of services.mariees[lang]; trackBy: trackByIndex"
+      >
+        <ng-container *ngFor="let info of service; let i = index">
+          <input
+            type="text"
+            [(ngModel)]="service[i]"
+            *ngIf="i == 0 || i == 2 || i == 3"
+          />
+        </ng-container>
+      </div>
+      <p class="titre">Forfaits invitées</p>
+      <div class="forfait" *ngFor="let service of services.invitees[lang]">
+        <ng-container
+          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
+        >
+          <input
+            type="text"
+            [(ngModel)]="service[i]"
+            *ngIf="i == 0 || i == 2 || i == 3"
+          />
+        </ng-container>
+      </div>
+      <p class="titre">Options</p>
+      <div class="forfait" *ngFor="let service of services.autre[lang]">
+        <ng-container
+          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
+        >
+          <input type="text" [(ngModel)]="service[i]" />
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
