@@ -1937,11 +1937,10 @@
         <input type="text" [(ngModel)]="titres[lang][i]" />
       </div>
       <p class="titre">Forfaits mariées</p>
-      <div
-        class="forfait"
-        *ngFor="let service of services.mariees[lang]; trackBy: trackByIndex"
-      >
-        <ng-container *ngFor="let info of service; let i = index">
+      <div class="forfait" *ngFor="let service of services.mariees[lang]">
+        <ng-container
+          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
+        >
           <input
             type="text"
             [(ngModel)]="service[i]"
