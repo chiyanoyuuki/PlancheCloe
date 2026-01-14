@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   types = ['forfaits'];
   lang = 'fr';
   services: any = DATA.services;
+  textes: any = DATA.textes;
 
   ngOnInit() {}
 
@@ -88,5 +89,13 @@ export class AppComponent implements OnInit {
         '.jpg';
       link.click();
     });
+  }
+
+  deltxt(i: any) {
+    this.textes[this.lang].splice(i, 1);
+  }
+
+  addtxt() {
+    this.textes[this.lang].push('');
   }
 }

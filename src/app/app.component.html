@@ -181,39 +181,11 @@
       <img src="separ.png" class="separ" />
 
       <div class="textes">
-        <div>
-          <p>
-            Les indemnités kilométriques sont facturées à 0,40€/km (offertes
-            dans un rayon de 20 km).
-          </p>
-          <p>Les frais de péage restent à la charge du client.</p>
-        </div>
-        <div>
-          <p>
-            Pour réserver votre date, la signature du devis et un acompte de 30
-            % sont requis.
-          </p>
-          <p>
-            Le solde devra être réglé au plus tard le jour J, par virement,
-            chèque ou espèces.
-          </p>
-        </div>
-        <div>
-          <p>
-            À partir de 4 coiffures ou maquillages d'invitées réalisés par mes
-            soins, une remise de 10 % sera appliquée sur la prestation de la
-            mariée.
-          </p>
-        </div>
-        <div>
-          <p>
-            Une préparation très tôt dans la matinée ou un grand nombre
-            d'invitées peut nécessiter une maquilleuse/coiffeuse supplémentaire,
-            rigoureusement sélectionnée pour garantir un service de qualité
-            équivalente.
-          </p>
-          <p>Un supplément de 40€ par maquilleuse/coiffeuse sera appliqué.</p>
-        </div>
+        <p
+          *ngFor="let text of textes[lang]"
+          [innerHTML]="text == '' ? '&nbsp;' : text"
+          style="line-height: 13px"
+        ></p>
       </div>
     </div>
 
@@ -373,35 +345,11 @@
       <img src="separ.png" class="separ" />
 
       <div class="textes">
-        <div>
-          <p>
-            Mileage fees are charged at €0.40/km (free within a 20 km radius).
-          </p>
-          <p>Toll charges are the client’s responsibility.</p>
-        </div>
-        <div>
-          <p>
-            To secure your date, a signed quote and a 30% deposit are required.
-          </p>
-          <p>
-            The remaining balance must be paid no later than the wedding day via
-            bank transfer, check, or cash.
-          </p>
-        </div>
-        <div>
-          <p>
-            For 4 or more guest hairstyles or makeup services, a 10% discount
-            will be applied to the bride’s service.
-          </p>
-        </div>
-        <div>
-          <p>
-            An early morning preparation or a large number of guests may require
-            an additional makeup artist/hairstylist, carefully selected to
-            maintain the same level of service and professionalism.
-          </p>
-          <p>A €40 fee per additional makeup artist/hairstylist will apply.</p>
-        </div>
+        <p
+          *ngFor="let text of textes[lang]"
+          [innerHTML]="text == '' ? '&nbsp;' : text"
+          style="line-height: 13px"
+        ></p>
       </div>
     </div>
 
@@ -2017,6 +1965,17 @@
           <input type="text" [(ngModel)]="service[i]" />
         </ng-container>
       </div>
+      <p class="titre">Textes</p>
+      <div
+        class="forfait"
+        style="display: flex"
+        *ngFor="let text of textes[lang]; let i = index; trackBy: trackByIndex"
+      >
+        <input type="text" [(ngModel)]="textes[lang][i]" style="width: 100%" />
+        <button style="width: 50px" (click)="deltxt(i)">-</button>
+      </div>
+
+      <button style="width: 50px" (click)="addtxt()">+</button>
     </div>
   </div>
 </div>

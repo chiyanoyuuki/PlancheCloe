@@ -138,5 +138,31 @@
         ["Bridal follow-up", "50€/heure"]
       ]
     }
+  },
+  "textes": {
+    "fr": [
+      "Les indemnités kilométriques sont facturées à 0,40€/km (offertes dans un rayon de 20 km).",
+      "Les frais de péage restent à la charge du client.",
+      "",
+      "Pour réserver votre date, la signature du devis et un acompte de 30% sont requis.",
+      "Le solde devra être réglé au plus tard le jour J, par virement, chèque ou espèces.",
+      "",
+      "À partir de 4 coiffures ou maquillages d'invitées réalisés par mes soins, une remise de 10 % sera appliquée sur la prestation de la mariée.",
+      "",
+      "Une préparation très tôt dans la matinée ou un grand nombre d'invitées peut nécessiter une maquilleuse/coiffeuse supplémentaire, rigoureusement sélectionnée pour garantir un service de qualité équivalente.",
+      "Un supplément de 40€ par maquilleuse/coiffeuse sera appliqué."
+    ],
+    "en": [
+      "Mileage fees are charged at €0.40/km (free within a 20 km radius).",
+      "Toll charges remain the responsibility of the client.",
+      "",
+      "To reserve your date, the quotation must be signed and a 30% deposit is required.",
+      "The balance must be paid no later than the event day, by bank transfer, cheque, or cash.",
+      "",
+      "From 4 guest hairstyles or makeup services provided by me, a 10% discount will be applied to the bride’s service.",
+      "",
+      "An early morning preparation or a large number of guests may require an additional makeup artist/hairdresser, carefully selected to ensure an equivalent level of service quality.",
+      "An additional fee of €40 per makeup artist/hairdresser will apply."
+    ]
   }
 }
