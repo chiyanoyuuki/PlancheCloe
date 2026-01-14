@@ -132,8 +132,8 @@
 
       <ng-template #newBlocFr>
         <div class="flex between">
-          <p class="title padbot">Forfaits Mariées — Essai & Jour J</p>
-          <p class="ita2">Kit de retouches inclus</p>
+          <p class="title padbot">{{ titres.fr[0] }}</p>
+          <p class="ita2">{{ titres.fr[3] }}</p>
         </div>
         <div class="blocs">
           <div
@@ -149,7 +149,7 @@
           </div>
         </div>
 
-        <p class="title padbot">Forfaits Invitées — Jour J</p>
+        <p class="title padbot">{{ titres.fr[1] }}</p>
         <div class="blocs">
           <div
             class="forfait"
@@ -164,12 +164,10 @@
         </div>
 
         <p class="ita pad">
-          Les samedis de mai a septembre, mes déplacements sont réservés aux
-          forfaits complets mariée, accompagnés d’au moins 4 prestations pour
-          les invitées.
+          {{ phrase.fr }}
         </p>
 
-        <p class="title padbot">Options</p>
+        <p class="title padbot">{{ titres.fr[2] }}</p>
         <div class="blocs optionsbloc">
           <div *ngFor="let service of services.autre.fr">
             <p>{{ service[0] }}</p>
@@ -297,8 +295,8 @@
 
       <ng-template #newBlocEn>
         <div class="flex between">
-          <p class="title padbot">Bridal Packages — Trial & Wedding Day</p>
-          <p class="ita2">Touch-up kit included</p>
+          <p class="title padbot">{{ titres.en[0] }}</p>
+          <p class="ita2">{{ titres.en[3] }}</p>
         </div>
         <div class="blocs">
           <div
@@ -314,7 +312,7 @@
           </div>
         </div>
 
-        <p class="title padbot">Guest Packages — Wedding Day</p>
+        <p class="title padbot">{{ titres.en[1] }}</p>
         <div class="blocs">
           <div
             class="forfait"
@@ -329,11 +327,10 @@
         </div>
 
         <p class="ita pad">
-          On Saturdays from May to September, my bookings are limited to full
-          bridal packages, accompanied by at least four services for guests.
+          {{ phrase.en }}
         </p>
 
-        <p class="title padbot">Add-ons</p>
+        <p class="title padbot">{{ titres.en[2] }}</p>
         <div class="blocs optionsbloc">
           <div *ngFor="let service of services.autre.en">
             <p>{{ service[0] }}</p>
@@ -1932,6 +1929,13 @@
     </div>
 
     <div>
+      <p class="titre">Titres</p>
+      <div
+        class="forfait"
+        *ngFor="let titre of titres[lang]; let i = index; trackBy: trackByIndex"
+      >
+        <input type="text" [(ngModel)]="titres[lang][i]" />
+      </div>
       <p class="titre">Forfaits mariées</p>
       <div
         class="forfait"
@@ -1957,6 +1961,7 @@
           />
         </ng-container>
       </div>
+      <input type="text" [(ngModel)]="phrase[lang]" style="width: 100%" />
       <p class="titre">Options</p>
       <div class="forfait" *ngFor="let service of services.autre[lang]">
         <ng-container

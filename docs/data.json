@@ -164,5 +164,23 @@
       "An early morning preparation or a large number of guests may require an additional makeup artist/hairdresser, carefully selected to ensure an equivalent level of service quality.",
       "An additional fee of €40 per makeup artist/hairdresser will apply."
     ]
+  },
+  "phrase": {
+    "fr": "Les samedis de mai a septembre, mes déplacements sont réservés aux forfaits complets mariée, accompagnés d’au moins 4 prestations pour les invitées. ",
+    "en": "On Saturdays from May to September, my bookings are limited to full bridal packages, accompanied by at least four services for guests. "
+  },
+  "titres": {
+    "fr": [
+      "Forfaits Mariées — Essai & Jour J",
+      "Forfaits Invitées — Jour J",
+      "Options",
+      "Kit de retouches inclus"
+    ],
+    "en": [
+      "Bridal Packages — Trial & Wedding Day",
+      "Guest Packages — Wedding Day",
+      "Add-ons",
+      "Touch-up kit included"
+    ]
   }
 }

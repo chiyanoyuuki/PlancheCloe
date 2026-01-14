@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
   lang = 'fr';
   services: any = DATA.services;
   textes: any = DATA.textes;
+  phrase: any = DATA.phrase;
+  titres: any = DATA.titres;
 
   ngOnInit() {}
 
