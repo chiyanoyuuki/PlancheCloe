@@ -182,5 +182,34 @@
       "Add-ons",
       "Touch-up kit included"
     ]
+  },
+  "footer": {
+    "tel": "+ 33 6 68 64 44 02",
+    "insta": "cloe_mua",
+    "siret": "883 822 801 00014",
+    "mail": "cloe.chaudron@outlook.com",
+    "fb": "Cloé Chaudron - Beauty",
+    "website": "www.cloechaudronbeauty.com"
+  },
+  "images": {
+    "fond": "fond3.jpg",
+    "logotop": "logotop.png",
+    "separ": "separ.png"
+  },
+  "positions": {
+    "prestas": { "x": 0, "y": 0 },
+    "titreMariees": { "x": 0, "y": 0 },
+    "kit": { "x": 0, "y": 0 },
+    "titreInvitees": { "x": 0, "y": 0 },
+    "phrase": { "x": 0, "y": 0 },
+    "titreOptions": { "x": 0, "y": 0 },
+    "textes": { "x": 0, "y": 0 },
+    "footer": { "x": 0, "y": 0 }
+  },
+  "layout": {
+    "prestasPadX": 40,
+    "separMargin": 16,
+    "mariesBigIndex": 4,
+    "inviteesMoreIndex": 1
   }
 }
