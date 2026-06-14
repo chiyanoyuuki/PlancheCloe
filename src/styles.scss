@@ -517,3 +517,259 @@ ul {
   font-weight: bold;
   margin: 2vh;
 }
+
+/* ===========================================================================
+   Panneau d'edition (admin)
+   =========================================================================== */
+.options {
+  width: 400px;
+  min-width: 400px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: #1d1530;
+  color: #eee;
+  padding: 14px;
+
+  * {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .titre {
+    color: #d9b3ff;
+    margin: 6px 0;
+    font-size: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    background: #6f4181;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: 2px;
+  }
+  button:hover {
+    background: #84509b;
+  }
+  button:disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  button.del {
+    background: #a13a3a;
+    padding: 4px 9px;
+  }
+  button.save {
+    background: #2e8b57;
+    font-weight: bold;
+  }
+  button.edit {
+    background: #b07d2b;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    background: #2a2040;
+    color: #fff;
+    border: 1px solid #4a3f63;
+    border-radius: 5px;
+    padding: 5px 6px;
+  }
+  input[type="checkbox"] {
+    width: auto;
+  }
+  input[type="file"] {
+    border: none;
+    padding: 2px 0;
+    font-size: 11px;
+  }
+  textarea {
+    resize: vertical;
+    line-height: 1.3;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .savebar {
+    position: sticky;
+    top: -14px;
+    z-index: 5;
+    background: #1d1530;
+    padding: 10px 0;
+    margin-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    border-bottom: 1px solid #4a3f63;
+  }
+  .savebar.bottom {
+    position: static;
+    border-bottom: none;
+    border-top: 1px solid #4a3f63;
+    margin-top: 12px;
+  }
+
+  .status {
+    font-size: 12px;
+    margin: 4px 0;
+  }
+  .status.ok {
+    color: #7cfc9b;
+  }
+  .status.ko {
+    color: #ff8d8d;
+  }
+  .err {
+    color: #ff8d8d;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .hint {
+    font-size: 11px;
+    opacity: 0.7;
+    margin: 4px 0;
+    line-height: 1.3;
+  }
+
+  .login {
+    input {
+      margin: 6px 0;
+    }
+  }
+
+  details {
+    border: 1px solid #4a3f63;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 4px 10px 10px;
+    background: #241a3a;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #d9b3ff;
+    padding: 6px 0;
+    font-size: 14px;
+  }
+
+  label {
+    display: block;
+    margin: 7px 0;
+    > span {
+      display: block;
+      font-size: 11px;
+      opacity: 0.8;
+      margin-bottom: 2px;
+    }
+  }
+  label.chk,
+  label.inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    > span {
+      margin: 0;
+      flex: 1;
+    }
+  }
+  label.chk input,
+  label.inline input {
+    width: auto;
+  }
+  label.inline input {
+    width: 80px;
+  }
+
+  .card {
+    border: 1px solid #4a3f63;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 8px 0;
+    background: #1a1330;
+  }
+  .cardhead {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
+    .sp {
+      flex: 1;
+    }
+    button {
+      padding: 3px 8px;
+      margin: 0;
+    }
+  }
+
+  .imgrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    input:not([type="file"]) {
+      width: auto;
+      flex: 1;
+      min-width: 110px;
+    }
+  }
+  .thumb {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    background: #ffffff22;
+    border-radius: 4px;
+    padding: 2px;
+  }
+
+  .optrow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 5px 0;
+    input {
+      flex: 1;
+    }
+    input.price {
+      flex: 0 0 90px;
+    }
+    button {
+      padding: 4px 8px;
+      margin: 0;
+    }
+  }
+
+  .posrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 0;
+    .lbl {
+      flex: 1;
+      font-size: 11px;
+    }
+    .xy {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+    }
+    input {
+      width: 56px;
+    }
+  }
+}

@@ -1,9 +1,15 @@
 <div style="display: flex">
   <div #htmlContent id="htmlContent" class="content" *ngIf="true">
-    <img src="fond3.jpg" class="fond" />
+    <img [src]="imgSrc(images.fond, 'fond3.jpg')" class="fond" />
 
-    <div *ngIf="lang === 'fr'" class="prestas">
-      <img src="logotop.png" class="logotop" />
+    <div
+      *ngIf="lang === 'fr'"
+      class="prestas"
+      [style.transform]="trans(positions.prestas)"
+      [style.paddingLeft.px]="layout.prestasPadX"
+      [style.paddingRight.px]="layout.prestasPadX"
+    >
+      <img [src]="imgSrc(images.logotop, 'logotop.png')" class="logotop" />
 
       <ng-container *ngIf="false; else newBlocFr">
         <p class="title">Mariages et Fiançailles</p>
@@ -132,16 +138,20 @@
 
       <ng-template #newBlocFr>
         <div class="flex between">
-          <p class="title padbot">{{ titres.fr[0] }}</p>
-          <p class="ita2">{{ titres.fr[3] }}</p>
+          <p class="title padbot" [style.transform]="trans(positions.titreMariees)">
+            {{ titres.fr[0] }}
+          </p>
+          <p class="ita2" [style.transform]="trans(positions.kit)">
+            {{ titres.fr[3] }}
+          </p>
         </div>
         <div class="blocs">
           <div
             class="forfait"
             *ngFor="let service of services.mariees.fr; let i = index"
-            [class.big]="i == 4"
+            [class.big]="i === layout.mariesBigIndex"
           >
-            <img src="{{ service[1] }}.png" />
+            <img [src]="imgSrc(service[1])" />
             <div>
               <p class="top">{{ service[2] }} - {{ service[0] }}</p>
               <p>{{ service[3] }}</p>
@@ -149,13 +159,15 @@
           </div>
         </div>
 
-        <p class="title padbot">{{ titres.fr[1] }}</p>
+        <p class="title padbot" [style.transform]="trans(positions.titreInvitees)">
+          {{ titres.fr[1] }}
+        </p>
         <div class="blocs">
           <div
             class="forfait"
             *ngFor="let service of services.invitees.fr; let i = index"
           >
-            <img src="{{ service[1] }}.png" [class.more]="i == 1" />
+            <img [src]="imgSrc(service[1])" [class.more]="i === layout.inviteesMoreIndex" />
             <div>
               <p class="top">{{ service[2] }} - {{ service[0] }}</p>
               <p>{{ service[3] }}</p>
@@ -163,11 +175,13 @@
           </div>
         </div>
 
-        <p class="ita pad">
+        <p class="ita pad" [style.transform]="trans(positions.phrase)">
           {{ phrase.fr }}
         </p>
 
-        <p class="title padbot">{{ titres.fr[2] }}</p>
+        <p class="title padbot" [style.transform]="trans(positions.titreOptions)">
+          {{ titres.fr[2] }}
+        </p>
         <div class="blocs optionsbloc">
           <div *ngFor="let service of services.autre.fr">
             <p>{{ service[0] }}</p>
@@ -176,9 +190,14 @@
         </div>
       </ng-template>
 
-      <img src="separ.png" class="separ" />
+      <img
+        [src]="imgSrc(images.separ, 'separ.png')"
+        class="separ"
+        [style.marginTop.px]="layout.separMargin"
+        [style.marginBottom.px]="layout.separMargin"
+      />
 
-      <div class="textes">
+      <div class="textes" [style.transform]="trans(positions.textes)">
         <p
           *ngFor="let text of textes[lang]"
           [innerHTML]="text == '' ? '&nbsp;' : text"
@@ -187,8 +206,14 @@
       </div>
     </div>
 
-    <div *ngIf="lang === 'en'" class="prestas">
-      <img src="logotop.png" class="logotop" />
+    <div
+      *ngIf="lang === 'en'"
+      class="prestas"
+      [style.transform]="trans(positions.prestas)"
+      [style.paddingLeft.px]="layout.prestasPadX"
+      [style.paddingRight.px]="layout.prestasPadX"
+    >
+      <img [src]="imgSrc(images.logotop, 'logotop.png')" class="logotop" />
 
       <ng-container *ngIf="false; else newBlocEn">
         <p class="title">Weddings and Engagements</p>
@@ -295,16 +320,20 @@
 
       <ng-template #newBlocEn>
         <div class="flex between">
-          <p class="title padbot">{{ titres.en[0] }}</p>
-          <p class="ita2">{{ titres.en[3] }}</p>
+          <p class="title padbot" [style.transform]="trans(positions.titreMariees)">
+            {{ titres.en[0] }}
+          </p>
+          <p class="ita2" [style.transform]="trans(positions.kit)">
+            {{ titres.en[3] }}
+          </p>
         </div>
         <div class="blocs">
           <div
             class="forfait"
             *ngFor="let service of services.mariees.en; let i = index"
-            [class.big]="i == 4"
+            [class.big]="i === layout.mariesBigIndex"
           >
-            <img src="{{ service[1] }}.png" />
+            <img [src]="imgSrc(service[1])" />
             <div>
               <p class="top">{{ service[2] }} - {{ service[0] }}</p>
               <p>{{ service[3] }}</p>
@@ -312,13 +341,15 @@
           </div>
         </div>
 
-        <p class="title padbot">{{ titres.en[1] }}</p>
+        <p class="title padbot" [style.transform]="trans(positions.titreInvitees)">
+          {{ titres.en[1] }}
+        </p>
         <div class="blocs">
           <div
             class="forfait"
             *ngFor="let service of services.invitees.en; let i = index"
           >
-            <img src="{{ service[1] }}.png" [class.more]="i == 1" />
+            <img [src]="imgSrc(service[1])" [class.more]="i === layout.inviteesMoreIndex" />
             <div>
               <p class="top">{{ service[2] }} - {{ service[0] }}</p>
               <p>{{ service[3] }}</p>
@@ -326,11 +357,13 @@
           </div>
         </div>
 
-        <p class="ita pad">
+        <p class="ita pad" [style.transform]="trans(positions.phrase)">
           {{ phrase.en }}
         </p>
 
-        <p class="title padbot">{{ titres.en[2] }}</p>
+        <p class="title padbot" [style.transform]="trans(positions.titreOptions)">
+          {{ titres.en[2] }}
+        </p>
         <div class="blocs optionsbloc">
           <div *ngFor="let service of services.autre.en">
             <p>{{ service[0] }}</p>
@@ -339,9 +372,14 @@
         </div>
       </ng-template>
 
-      <img src="separ.png" class="separ" />
+      <img
+        [src]="imgSrc(images.separ, 'separ.png')"
+        class="separ"
+        [style.marginTop.px]="layout.separMargin"
+        [style.marginBottom.px]="layout.separMargin"
+      />
 
-      <div class="textes">
+      <div class="textes" [style.transform]="trans(positions.textes)">
         <p
           *ngFor="let text of textes[lang]"
           [innerHTML]="text == '' ? '&nbsp;' : text"
@@ -350,34 +388,34 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" [style.transform]="trans(positions.footer)">
       <div class="flex">
         <div>
           <img src="tel.png" />
-          <p>+ 33 6 68 64 44 02</p>
+          <p>{{ footer.tel }}</p>
         </div>
         <div>
           <img src="insta.png" />
-          <p>cloe_mua</p>
+          <p>{{ footer.insta }}</p>
         </div>
         <div>
           <p class="nope">SIRET :</p>
-          <p><b>883 822 801 00014</b></p>
+          <p><b>{{ footer.siret }}</b></p>
         </div>
       </div>
 
       <div class="flex">
         <div>
           <img src="mail.png" />
-          <p>cloe.chaudron&#64;outlook.com</p>
+          <p>{{ footer.mail }}</p>
         </div>
         <div>
           <img src="fb.png" />
-          <p>Cloé Chaudron - Beauty</p>
+          <p>{{ footer.fb }}</p>
         </div>
         <div>
           <img src="logo.png" />
-          <p>www.cloechaudronbeauty.com</p>
+          <p>{{ footer.website }}</p>
         </div>
       </div>
     </div>
@@ -1917,69 +1955,342 @@
   </div>
 
   <div class="options">
-    <div>
+    <div class="toolbar">
       <button (click)="lang = lang == 'fr' ? 'en' : 'fr'">
-        {{ lang == "fr" ? "Français" : "Anglais" }}
+        🌐 {{ lang == "fr" ? "Français" : "English" }}
       </button>
-      <button (click)="generatePDFfromHTML()">Générer PDF</button>
-      <button (click)="generateJPGfromHTML()">Générer JPG</button>
-      <button (click)="generatePDFfromHTMLPaysage()">
-        Générer PDF Paysage
+      <button (click)="generatePDFfromHTML()">PDF</button>
+      <button (click)="generateJPGfromHTML()">JPG</button>
+      <button (click)="generatePDFfromHTMLPaysage()">PDF paysage</button>
+      <button class="edit" (click)="showEditor = !showEditor">
+        {{ showEditor ? "✕ Fermer l’éditeur" : "✎ Modifier la planche" }}
       </button>
     </div>
 
-    <div>
-      <p class="titre">Titres</p>
-      <div
-        class="forfait"
-        *ngFor="let titre of titres[lang]; let i = index; trackBy: trackByIndex"
-      >
-        <input type="text" [(ngModel)]="titres[lang][i]" />
-      </div>
-      <p class="titre">Forfaits mariées</p>
-      <div class="forfait" *ngFor="let service of services.mariees[lang]">
-        <ng-container
-          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
-        >
-          <input
-            type="text"
-            [(ngModel)]="service[i]"
-            *ngIf="i == 0 || i == 2 || i == 3"
-          />
-        </ng-container>
-      </div>
-      <p class="titre">Forfaits invitées</p>
-      <div class="forfait" *ngFor="let service of services.invitees[lang]">
-        <ng-container
-          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
-        >
-          <input
-            type="text"
-            [(ngModel)]="service[i]"
-            *ngIf="i == 0 || i == 2 || i == 3"
-          />
-        </ng-container>
-      </div>
-      <input type="text" [(ngModel)]="phrase[lang]" style="width: 100%" />
-      <p class="titre">Options</p>
-      <div class="forfait" *ngFor="let service of services.autre[lang]">
-        <ng-container
-          *ngFor="let info of service; let i = index; trackBy: trackByIndex"
-        >
-          <input type="text" [(ngModel)]="service[i]" />
-        </ng-container>
-      </div>
-      <p class="titre">Textes</p>
-      <div
-        class="forfait"
-        style="display: flex"
-        *ngFor="let text of textes[lang]; let i = index; trackBy: trackByIndex"
-      >
-        <input type="text" [(ngModel)]="textes[lang][i]" style="width: 100%" />
-        <button style="width: 50px" (click)="deltxt(i)">-</button>
+    <div class="editor" *ngIf="showEditor">
+      <!-- CONNEXION -->
+      <div class="login" *ngIf="!isAdmin">
+        <p class="titre">Connexion administrateur</p>
+        <p class="hint">
+          Connectez-vous pour modifier la planche et enregistrer vos
+          changements sur le serveur.
+        </p>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          placeholder="Mot de passe"
+          (keyup.enter)="login()"
+        />
+        <button (click)="login()" [disabled]="loggingIn">
+          {{ loggingIn ? "Connexion…" : "Se connecter" }}
+        </button>
+        <p class="err" *ngIf="loginError">{{ loginError }}</p>
       </div>
 
-      <button style="width: 50px" (click)="addtxt()">+</button>
+      <!-- EDITEUR -->
+      <ng-container *ngIf="isAdmin">
+        <div class="savebar">
+          <button class="save" (click)="save()" [disabled]="saving">
+            💾 {{ saving ? "Enregistrement…" : "Enregistrer" }}
+          </button>
+          <button (click)="loadFromServer()" title="Recharger depuis le serveur">
+            ↺ Recharger
+          </button>
+          <button (click)="logout()">Déconnexion</button>
+        </div>
+        <p
+          class="status"
+          *ngIf="statusMsg"
+          [class.ok]="statusOk"
+          [class.ko]="!statusOk"
+        >
+          {{ statusMsg }}
+        </p>
+        <p class="hint" *ngIf="lastUpdated">
+          Dernière sauvegarde : {{ lastUpdated }}
+        </p>
+        <p class="hint">
+          Langue en cours d’édition :
+          <b>{{ lang == "fr" ? "Français" : "English" }}</b> — utilisez le
+          bouton 🌐 en haut pour changer.
+        </p>
+
+        <!-- TITRES -->
+        <details open>
+          <summary>Titres</summary>
+          <label
+            *ngFor="let t of titres[lang]; let i = index; trackBy: trackByIndex"
+          >
+            <span>{{ titreLabels[i] }}</span>
+            <input type="text" [(ngModel)]="titres[lang][i]" />
+          </label>
+        </details>
+
+        <!-- FORFAITS MARIEES -->
+        <details open>
+          <summary>Forfaits mariées</summary>
+          <div
+            class="card"
+            *ngFor="
+              let service of services.mariees[lang];
+              let i = index;
+              trackBy: trackByIndex
+            "
+          >
+            <div class="cardhead">
+              <b>#{{ i + 1 }}</b>
+              <span class="sp"></span>
+              <button (click)="moveService('mariees', i, -1)" [disabled]="i === 0">
+                ↑
+              </button>
+              <button
+                (click)="moveService('mariees', i, 1)"
+                [disabled]="i === services.mariees[lang].length - 1"
+              >
+                ↓
+              </button>
+              <button class="del" (click)="removeService('mariees', i)">✕</button>
+            </div>
+            <label><span>Prix</span><input [(ngModel)]="service[0]" /></label>
+            <label><span>Titre</span><input [(ngModel)]="service[2]" /></label>
+            <label
+              ><span>Sous-titre</span><input [(ngModel)]="service[3]"
+            /></label>
+            <label>
+              <span>Description</span>
+              <textarea rows="3" [(ngModel)]="service[4]"></textarea>
+            </label>
+            <label
+              ><span>Ligne « kit retouches »</span
+              ><input [(ngModel)]="service[5]"
+            /></label>
+            <label>
+              <span>Image (fleur)</span>
+              <span class="imgrow">
+                <img [src]="imgSrc(service[1])" class="thumb" />
+                <input
+                  list="flowers"
+                  [(ngModel)]="service[1]"
+                  placeholder="nom de fleur ou URL"
+                />
+                <input
+                  type="file"
+                  accept="image/*"
+                  (change)="uploadImage($event, service, 1)"
+                />
+              </span>
+            </label>
+            <label class="chk">
+              <input
+                type="checkbox"
+                [checked]="layout.mariesBigIndex === i"
+                (change)="setBig(i)"
+              />
+              <span>Carte pleine largeur</span>
+            </label>
+          </div>
+          <button (click)="addService('mariees')">+ Ajouter un forfait</button>
+        </details>
+
+        <!-- FORFAITS INVITEES -->
+        <details open>
+          <summary>Forfaits invitées</summary>
+          <div
+            class="card"
+            *ngFor="
+              let service of services.invitees[lang];
+              let i = index;
+              trackBy: trackByIndex
+            "
+          >
+            <div class="cardhead">
+              <b>#{{ i + 1 }}</b>
+              <span class="sp"></span>
+              <button (click)="moveService('invitees', i, -1)" [disabled]="i === 0">
+                ↑
+              </button>
+              <button
+                (click)="moveService('invitees', i, 1)"
+                [disabled]="i === services.invitees[lang].length - 1"
+              >
+                ↓
+              </button>
+              <button class="del" (click)="removeService('invitees', i)">✕</button>
+            </div>
+            <label><span>Prix</span><input [(ngModel)]="service[0]" /></label>
+            <label><span>Titre</span><input [(ngModel)]="service[2]" /></label>
+            <label
+              ><span>Sous-titre</span><input [(ngModel)]="service[3]"
+            /></label>
+            <label>
+              <span>Image (fleur)</span>
+              <span class="imgrow">
+                <img [src]="imgSrc(service[1])" class="thumb" />
+                <input
+                  list="flowers"
+                  [(ngModel)]="service[1]"
+                  placeholder="nom de fleur ou URL"
+                />
+                <input
+                  type="file"
+                  accept="image/*"
+                  (change)="uploadImage($event, service, 1)"
+                />
+              </span>
+            </label>
+          </div>
+          <button (click)="addService('invitees')">+ Ajouter un forfait</button>
+        </details>
+
+        <!-- PHRASE -->
+        <details open>
+          <summary>Phrase en italique</summary>
+          <textarea rows="3" [(ngModel)]="phrase[lang]"></textarea>
+        </details>
+
+        <!-- OPTIONS -->
+        <details open>
+          <summary>Options</summary>
+          <div
+            class="optrow"
+            *ngFor="
+              let service of services.autre[lang];
+              let i = index;
+              trackBy: trackByIndex
+            "
+          >
+            <input [(ngModel)]="service[0]" placeholder="Libellé" />
+            <input [(ngModel)]="service[1]" placeholder="Prix" class="price" />
+            <button class="del" (click)="removeOption(i)">✕</button>
+          </div>
+          <button (click)="addOption()">+ Ajouter une option</button>
+        </details>
+
+        <!-- TEXTES / CONDITIONS -->
+        <details open>
+          <summary>Conditions (bas de planche)</summary>
+          <p class="hint">Laissez une ligne vide pour créer un espacement.</p>
+          <div
+            class="optrow"
+            *ngFor="
+              let text of textes[lang];
+              let i = index;
+              trackBy: trackByIndex
+            "
+          >
+            <input [(ngModel)]="textes[lang][i]" />
+            <button (click)="movetxt(i, -1)" [disabled]="i === 0">↑</button>
+            <button
+              (click)="movetxt(i, 1)"
+              [disabled]="i === textes[lang].length - 1"
+            >
+              ↓
+            </button>
+            <button class="del" (click)="deltxt(i)">✕</button>
+          </div>
+          <button (click)="addtxt()">+ Ajouter une ligne</button>
+        </details>
+
+        <!-- PIED DE PAGE -->
+        <details>
+          <summary>Pied de page (contacts)</summary>
+          <label><span>Téléphone</span><input [(ngModel)]="footer.tel" /></label>
+          <label
+            ><span>Instagram</span><input [(ngModel)]="footer.insta"
+          /></label>
+          <label><span>SIRET</span><input [(ngModel)]="footer.siret" /></label>
+          <label><span>E-mail</span><input [(ngModel)]="footer.mail" /></label>
+          <label><span>Facebook</span><input [(ngModel)]="footer.fb" /></label>
+          <label
+            ><span>Site web</span><input [(ngModel)]="footer.website"
+          /></label>
+        </details>
+
+        <!-- IMAGES GENERALES -->
+        <details>
+          <summary>Images générales</summary>
+          <label>
+            <span>Image de fond</span>
+            <span class="imgrow">
+              <img [src]="imgSrc(images.fond, 'fond3.jpg')" class="thumb" />
+              <input list="backgrounds" [(ngModel)]="images.fond" />
+              <input
+                type="file"
+                accept="image/*"
+                (change)="uploadImage($event, images, 'fond')"
+              />
+            </span>
+          </label>
+          <label>
+            <span>Logo (haut de planche)</span>
+            <span class="imgrow">
+              <img [src]="imgSrc(images.logotop, 'logotop.png')" class="thumb" />
+              <input [(ngModel)]="images.logotop" />
+              <input
+                type="file"
+                accept="image/*"
+                (change)="uploadImage($event, images, 'logotop')"
+              />
+            </span>
+          </label>
+          <label>
+            <span>Séparateur</span>
+            <span class="imgrow">
+              <img [src]="imgSrc(images.separ, 'separ.png')" class="thumb" />
+              <input [(ngModel)]="images.separ" />
+              <input
+                type="file"
+                accept="image/*"
+                (change)="uploadImage($event, images, 'separ')"
+              />
+            </span>
+          </label>
+        </details>
+
+        <!-- MISE EN PAGE / POSITIONS -->
+        <details>
+          <summary>Mise en page & positions</summary>
+          <label class="inline">
+            <span>Marge latérale du bloc (px)</span>
+            <input type="number" [(ngModel)]="layout.prestasPadX" />
+          </label>
+          <label class="inline">
+            <span>Marge du séparateur (px)</span>
+            <input type="number" [(ngModel)]="layout.separMargin" />
+          </label>
+          <p class="hint">
+            Décalage horizontal (X) et vertical (Y) de chaque élément, en
+            pixels (valeurs négatives autorisées).
+          </p>
+          <div class="posrow" *ngFor="let f of positionFields">
+            <span class="lbl">{{ f.label }}</span>
+            <span class="xy">
+              X <input type="number" [(ngModel)]="positions[f.key].x" /> Y
+              <input type="number" [(ngModel)]="positions[f.key].y" />
+            </span>
+          </div>
+        </details>
+
+        <div class="savebar bottom">
+          <button class="save" (click)="save()" [disabled]="saving">
+            💾 {{ saving ? "Enregistrement…" : "Enregistrer" }}
+          </button>
+          <span
+            class="status"
+            *ngIf="statusMsg"
+            [class.ok]="statusOk"
+            [class.ko]="!statusOk"
+            >{{ statusMsg }}</span
+          >
+        </div>
+      </ng-container>
     </div>
+
+    <datalist id="flowers">
+      <option *ngFor="let f of flowerOptions" [value]="f"></option>
+    </datalist>
+    <datalist id="backgrounds">
+      <option *ngFor="let b of backgroundOptions" [value]="b"></option>
+    </datalist>
   </div>
 </div>

@@ -1,0 +1,12 @@
+# Transmettre l'en-tete Authorization a PHP (perdu par defaut sur certains serveurs)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# Interdire l'acces direct aux fichiers sensibles
+<FilesMatch "^(config\.php|config\.sample\.php|.*\.sql)$">
+  Require all denied
+</FilesMatch>

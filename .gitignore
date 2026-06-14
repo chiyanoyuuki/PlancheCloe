@@ -40,3 +40,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# PlancheCloe backend (secrets, base SQLite et images televersees)
+backend/api/config.php
+backend/api/data/
+backend/api/uploads/*
+!backend/api/uploads/.gitkeep
+!backend/api/uploads/.htaccess
+
+# Patches generes
+*.patch

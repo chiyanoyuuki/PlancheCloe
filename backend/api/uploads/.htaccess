@@ -1,0 +1,12 @@
+# Empeche l'execution de tout script dans le dossier des images televersees.
+<FilesMatch "\.(php|phtml|phar|pl|py|cgi|sh)$">
+  Require all denied
+</FilesMatch>
+RemoveHandler .php .phtml .phar
+AddType text/plain .php .phtml .phar
+
+# Autorise le chargement des images depuis le site (necessaire pour l'export
+# PDF/JPG qui passe par un canvas).
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
