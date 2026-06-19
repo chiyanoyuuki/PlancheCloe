@@ -198,11 +198,16 @@
   },
   "positions": {
     "prestas": { "x": 0, "y": 0 },
+    "logotop": { "x": 0, "y": 0 },
     "titreMariees": { "x": 0, "y": 0 },
     "kit": { "x": 0, "y": 0 },
+    "blocsMariees": { "x": 0, "y": 0 },
     "titreInvitees": { "x": 0, "y": 0 },
+    "blocsInvitees": { "x": 0, "y": 0 },
     "phrase": { "x": 0, "y": 0 },
     "titreOptions": { "x": 0, "y": 0 },
+    "blocsOptions": { "x": 0, "y": 0 },
+    "separateur": { "x": 0, "y": 0 },
     "textes": { "x": 0, "y": 0 },
     "footer": { "x": 0, "y": 0 }
   },

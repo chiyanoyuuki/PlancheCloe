@@ -9,7 +9,11 @@
       [style.paddingLeft.px]="layout.prestasPadX"
       [style.paddingRight.px]="layout.prestasPadX"
     >
-      <img [src]="imgSrc(images.logotop, 'logotop.png')" class="logotop" />
+      <img
+        [src]="imgSrc(images.logotop, 'logotop.png')"
+        class="logotop"
+        [style.transform]="trans(positions.logotop)"
+      />
 
       <ng-container *ngIf="false; else newBlocFr">
         <p class="title">Mariages et Fiançailles</p>
@@ -145,11 +149,12 @@
             {{ titres.fr[3] }}
           </p>
         </div>
-        <div class="blocs">
+        <div class="blocs" [style.transform]="trans(positions.blocsMariees)">
           <div
             class="forfait"
             *ngFor="let service of services.mariees.fr; let i = index"
             [class.big]="i === layout.mariesBigIndex"
+            [style.transform]="trans(service[6])"
           >
             <img [src]="imgSrc(service[1])" />
             <div>
@@ -162,10 +167,11 @@
         <p class="title padbot" [style.transform]="trans(positions.titreInvitees)">
           {{ titres.fr[1] }}
         </p>
-        <div class="blocs">
+        <div class="blocs" [style.transform]="trans(positions.blocsInvitees)">
           <div
             class="forfait"
             *ngFor="let service of services.invitees.fr; let i = index"
+            [style.transform]="trans(service[6])"
           >
             <img [src]="imgSrc(service[1])" [class.more]="i === layout.inviteesMoreIndex" />
             <div>
@@ -182,7 +188,10 @@
         <p class="title padbot" [style.transform]="trans(positions.titreOptions)">
           {{ titres.fr[2] }}
         </p>
-        <div class="blocs optionsbloc">
+        <div
+          class="blocs optionsbloc"
+          [style.transform]="trans(positions.blocsOptions)"
+        >
           <div *ngFor="let service of services.autre.fr">
             <p>{{ service[0] }}</p>
             <p>{{ service[1] }}</p>
@@ -195,6 +204,7 @@
         class="separ"
         [style.marginTop.px]="layout.separMargin"
         [style.marginBottom.px]="layout.separMargin"
+        [style.transform]="trans(positions.separateur)"
       />
 
       <div class="textes" [style.transform]="trans(positions.textes)">
@@ -213,7 +223,11 @@
       [style.paddingLeft.px]="layout.prestasPadX"
       [style.paddingRight.px]="layout.prestasPadX"
     >
-      <img [src]="imgSrc(images.logotop, 'logotop.png')" class="logotop" />
+      <img
+        [src]="imgSrc(images.logotop, 'logotop.png')"
+        class="logotop"
+        [style.transform]="trans(positions.logotop)"
+      />
 
       <ng-container *ngIf="false; else newBlocEn">
         <p class="title">Weddings and Engagements</p>
@@ -327,11 +341,12 @@
             {{ titres.en[3] }}
           </p>
         </div>
-        <div class="blocs">
+        <div class="blocs" [style.transform]="trans(positions.blocsMariees)">
           <div
             class="forfait"
             *ngFor="let service of services.mariees.en; let i = index"
             [class.big]="i === layout.mariesBigIndex"
+            [style.transform]="trans(service[6])"
           >
             <img [src]="imgSrc(service[1])" />
             <div>
@@ -344,10 +359,11 @@
         <p class="title padbot" [style.transform]="trans(positions.titreInvitees)">
           {{ titres.en[1] }}
         </p>
-        <div class="blocs">
+        <div class="blocs" [style.transform]="trans(positions.blocsInvitees)">
           <div
             class="forfait"
             *ngFor="let service of services.invitees.en; let i = index"
+            [style.transform]="trans(service[6])"
           >
             <img [src]="imgSrc(service[1])" [class.more]="i === layout.inviteesMoreIndex" />
             <div>
@@ -364,7 +380,10 @@
         <p class="title padbot" [style.transform]="trans(positions.titreOptions)">
           {{ titres.en[2] }}
         </p>
-        <div class="blocs optionsbloc">
+        <div
+          class="blocs optionsbloc"
+          [style.transform]="trans(positions.blocsOptions)"
+        >
           <div *ngFor="let service of services.autre.en">
             <p>{{ service[0] }}</p>
             <p>{{ service[1] }}</p>
@@ -377,6 +396,7 @@
         class="separ"
         [style.marginTop.px]="layout.separMargin"
         [style.marginBottom.px]="layout.separMargin"
+        [style.transform]="trans(positions.separateur)"
       />
 
       <div class="textes" [style.transform]="trans(positions.textes)">
@@ -2088,6 +2108,13 @@
               />
               <span>Carte pleine largeur</span>
             </label>
+            <label class="inline">
+              <span>Position de la carte (px)</span>
+              <span class="xy">
+                X <input type="number" [(ngModel)]="service[6].x" /> Y
+                <input type="number" [(ngModel)]="service[6].y" />
+              </span>
+            </label>
           </div>
           <button (click)="addService('mariees')">+ Ajouter un forfait</button>
         </details>
@@ -2136,6 +2163,13 @@
                   accept="image/*"
                   (change)="uploadImage($event, service, 1)"
                 />
+              </span>
+            </label>
+            <label class="inline">
+              <span>Position de la carte (px)</span>
+              <span class="xy">
+                X <input type="number" [(ngModel)]="service[6].x" /> Y
+                <input type="number" [(ngModel)]="service[6].y" />
               </span>
             </label>
           </div>

@@ -42,11 +42,16 @@ export class AppComponent implements OnInit {
   ];
   positionFields = [
     { key: 'prestas', label: 'Bloc principal (toute la zone)' },
-    { key: 'titreMariees', label: 'Titre forfaits mariees' },
+    { key: 'logotop', label: 'Logo (haut)' },
+    { key: 'titreMariees', label: 'Titre forfaits mariées' },
     { key: 'kit', label: 'Encart « kit inclus »' },
-    { key: 'titreInvitees', label: 'Titre forfaits invitees' },
+    { key: 'blocsMariees', label: 'Cartes mariées (bloc entier)' },
+    { key: 'titreInvitees', label: 'Titre forfaits invitées' },
+    { key: 'blocsInvitees', label: 'Cartes invitées (bloc entier)' },
     { key: 'phrase', label: 'Phrase en italique' },
     { key: 'titreOptions', label: 'Titre options' },
+    { key: 'blocsOptions', label: 'Options (bloc entier)' },
+    { key: 'separateur', label: 'Séparateur' },
     { key: 'textes', label: 'Bloc des conditions (textes)' },
     { key: 'footer', label: 'Pied de page' },
   ];
@@ -126,6 +131,36 @@ export class AppComponent implements OnInit {
     this.images = merged.images;
     this.positions = merged.positions;
     this.layout = merged.layout;
+    this.ensurePositions();
+    this.ensureCardOffsets();
+  }
+
+  // Garantit que chaque position nommee existe sous la forme { x, y }
+  // (utile quand une ancienne sauvegarde ne contient pas encore tous les blocs).
+  private ensurePositions() {
+    if (!this.positions || typeof this.positions !== 'object') this.positions = {};
+    for (const f of this.positionFields) {
+      const p = this.positions[f.key];
+      if (!p || typeof p !== 'object') {
+        this.positions[f.key] = { x: 0, y: 0 };
+      } else {
+        p.x = +p.x || 0;
+        p.y = +p.y || 0;
+      }
+    }
+  }
+
+  // Garantit que chaque carte de forfait possede un decalage { x, y } en index 6.
+  private ensureCardOffsets() {
+    for (const group of ['mariees', 'invitees']) {
+      for (const l of ['fr', 'en']) {
+        const arr = this.services?.[group]?.[l];
+        if (!Array.isArray(arr)) continue;
+        for (const s of arr) {
+          if (!s[6] || typeof s[6] !== 'object') s[6] = { x: 0, y: 0 };
+        }
+      }
+    }
   }
 
   private buildData(): any {
@@ -290,10 +325,12 @@ export class AppComponent implements OnInit {
   //  Gestion des forfaits (mariees / invitees) — synchronise FR et EN
   // ---------------------------------------------------------------------------
   addService(group: string) {
-    const fr = ['0€', 'rose', 'Nouveau forfait', 'Sous-titre', '', ''];
-    const en = ['0€', 'rose', 'New package', 'Subtitle', '', ''];
-    this.services[group].fr.push([...fr]);
-    this.services[group].en.push([...en]);
+    this.services[group].fr.push([
+      '0€', 'rose', 'Nouveau forfait', 'Sous-titre', '', '', { x: 0, y: 0 },
+    ]);
+    this.services[group].en.push([
+      '0€', 'rose', 'New package', 'Subtitle', '', '', { x: 0, y: 0 },
+    ]);
   }
 
   removeService(group: string, i: number) {
